@@ -1,0 +1,228 @@
+channel_id: eundo-malsseum
+channel_name_kr: "은도 목사의 말씀 쉼터"
+handle: "@은도목사"                      # TODO: kiểm tra handle còn trống trước khi tạo kênh
+language: ko
+niche: "기독교 설교 / 노년의 신앙 / 천국·부활·사별 위로"
+
+# Nhân vật dẫn kênh — HOÀN TOÀN HƯ CẤU. Không dựa trên, không ám chỉ bất kỳ mục sư có thật nào
+# (đặc biệt KHÔNG mô phỏng 신성종 목사 của kênh đối thủ: không dùng tên, tiểu sử, hội thánh, giọng thật).
+persona:
+  name: "서은도 목사"
+  display_prefix: "[은도 목사]"
+  bio_fictional: >-
+    78세. 강원도 산골 작은 교회에서 40년 목회 후 은퇴.
+    10년 전 아내(가명 '정희')와 사별. 자녀 2명은 도시에 삶.
+    지금은 시골집 서재에서 매일 새벽 말씀을 묵상하며 성도들의 편지에 답한다.
+  voice: "할아버지가 손주에게 들려주듯 따뜻하고 느린 합쇼체. 꾸짖지 않고 위로한다."
+  signature_opening: "사랑하는 여러분, 오늘도 이 작은 서재에 찾아와 주셔서 고맙습니다."
+  signature_closing: "오늘도 주님 안에서 평안하십시오. 저는 내일 새벽에 또 기다리겠습니다."
+  recurring_elements:
+    - "서재 창밖의 오래된 감나무 (계절 따라 변화 — 영상 날짜와 계절 맞출 것)"
+    - "먼저 간 아내 정희의 낡은 성경책 (여백 메모를 가끔 인용)"
+    - "목회 시절 성도 이야기 — 반드시 익명/가명 ('한 권사님', '박 집사님')"
+
+tone:
+  pov: "1인칭 설교 (목사가 시청자에게 직접 말함)"
+  register: "합쇼체, 따뜻함, 느린 호흡, 질문을 던지고 잠시 멈춤"
+  sentence_style: "짧은 문장 위주. 핵심 문장 1개를 영상 내 3회 반복 (도입·중간·결론)"
+
+video_length_minutes: [30, 40]
+narration: "AI TTS 1개 목소리 (노년 남성, 저음), 채널 내내 고정. 실존 목사 음성 복제 금지."
+voice:                                    # chốt 2026-09-27 — giọng mẫu voice/test_full.mp3
+  reference_sample: "voice/test_full.mp3"
+  tool_voice_name: "voice han_dt6Va348"
+  speed: 0.9                              # bài dài ở 1.0 đọc nhanh (4.8 âm tiết/s, 27.6 phút); 0.9 → 4.35, 30.5 phút. KHÔNG chỉnh pitch
+  measured:                               # đo từ test_full.mp3
+    syllables_per_sec: 4.3                # cả khoảng lặng; đoạn cảm xúc tự chậm 3.5-3.9
+    f0_median_hz: 125
+    pitch_range_semitones: 6.6
+  syllables_for_30_40min: [7700, 10300]   # âm tiết Hàn cần cho 02_script.txt dài 30-40 phút
+  text_rules:
+    - "Câu Kinh Thánh để thành đoạn riêng, có khoảng nghỉ trước/sau (hoặc sinh riêng speed ~0.9)"
+    - "Chỗ cần im lặng dài (sau câu hỏi, trước cao trào): chèn break ~1.5s — '……' chỉ cho ~1s"
+
+content_rules:
+  scripture: "성경 구절은 실제 장·절과 문구 그대로 인용 (개역개정 기준). 없는 구절 창작 금지."
+  original_language: "헬라어/히브리어 해설은 표준 사전적 의미만 사용. 확실하지 않으면 원어 해설 생략."
+  doctrine: "교단마다 견해가 갈리는 주제(화장, 죽은 자를 위한 기도 등)는 '여러 견해가 있습니다'로 균형 제시, 단정 금지."
+  anecdotes: "목회 일화는 창작임을 전제로, 실존 인물·교회·지명 특정 금지."
+  medical_financial: "건강·재정 효과 약속 금지 (기도하면 병이 낫는다 등 단정 금지)."
+
+structure:                                # khung 1 bài giảng 30-40 phút
+  - "0:00 훅: 시청자의 질문을 그대로 읽음 + 결론 예고 1문장 (3문장 이내)"
+  - "짧은 인사 (signature_opening, 2문장 이내)"
+  - "목회 일화 1: 이 질문을 품었던 성도 이야기"
+  - "본론 3~6개 포인트 — 포인트마다 [성경 구절 → 쉬운 풀이 → 삶의 적용]"
+  - "35~45% 지점: soft CTA"
+  - "목회 일화 2 또는 아내 정희의 성경 메모 — 감정 절정"
+  - "결론: 핵심 문장 반복 + 짧은 축복 기도문"
+  - "hard CTA: 다음 설교 주제 구체적 예고 + signature_closing"
+
+motif:
+  core_symbol: "서재의 등불 (lamp)"
+  avoid_symbols:
+    - "문 (door) — 자매 채널 mun-yeolda 전용"
+    - "빛만 단독으로 쓰는 구도 (경쟁 채널과 중복)"
+
+characters:
+  policy: "실존 인물 이름 사용 금지. 가상 인물 + 흔한 이름만 사용."
+  reused_pool:
+    - "서은도 목사 (진행자, 78세)"
+    - "아내 정희 (사별, 성경 메모로만 등장)"
+
+color_palette:                             # tên khóa = VAI TRÒ mà tools/*.py yêu cầu, không phải tên màu
+  navy: "#2B1D14"                         # vai trò nền tối → thực tế: nâu gỗ sẫm (deep brown)
+  gold: "#E8A33D"                         # vai trò chữ/nhấn → thực tế: hổ phách ánh đèn (lamp amber)
+  glow_cream: "#F6ECD9"                   # vai trò ánh sáng dịu → thực tế: kem ấm
+
+thumbnail_bg:
+  model: "gpt_image_2_5"
+  aspect_ratio: "16:9"
+  palette_param: ""
+  reference_role: "image_references"      # dùng 1 ảnh gương mặt cố định của 서은도 목사 cho mọi tập
+  params:
+    quality: "high"
+    resolution: "2k"
+  style: >-
+    Photorealistic cinematic film still for a Korean Christian sermon YouTube thumbnail,
+    16:9 landscape, warm amber lamplight, shallow depth of field, high detail skin texture.
+  composition: >-
+    The main subject sits on the RIGHT side of the frame (roughly the right 40%), chest up,
+    at a wooden desk with an old open Bible under a small desk lamp, face sharply in focus.
+    The LEFT 55% of the frame is dark warm brown and low in detail (soft-focus bookshelves only,
+    no objects or faces there) so large Korean headline text can be placed on it.
+  variation_rules:                        # nền thumbnail đổi mỗi tập để feed không lặp hình (gương mặt giữ nguyên qua --ref)
+    - "Thời điểm: xoay vòng đêm khuya / rạng sáng xanh / chiều hoàng hôn — không trùng tập liền trước"
+    - "Mùa của cây hồng ngoài cửa sổ phải khớp ngày đăng (9-11: quả chín cam; 12-2: cành trụi, tuyết; 3-5: lá non; 6-8: lá xanh đậm)"
+    - "Đồ vật trong tay lấy từ kịch bản tập đó (Kinh Thánh, tách trà, lá thư, ảnh cũ...) — không trùng tập liền trước"
+    - "Biểu cảm theo cao trào kịch bản: mỉm cười ấm / trầm ngâm / rưng rưng / nhắm mắt cầu nguyện"
+    - "Ghi lựa chọn vào 06_series_state.json → thumbnail.bg_variation"
+  subject_style: >-
+    A completely fictional elderly Korean man around 78 years old, NOT resembling any real,
+    identifiable person, celebrity, pastor or politician. Looking at the viewer with quiet warmth.
+    No clerical collar, no logos.
+
+# Nhân vật trên thumbnail — 1 gương mặt cố định cho ~10 video rồi thay (make_bg.py tự dùng làm --ref).
+# Ảnh gốc lưu cục bộ trong characters/; nếu ref_job_id hết hạn trên Higgsfield → media_upload
+# lại local_master, lấy media_id mới điền vào ref_job_id.
+character:
+  rotate_after_videos: 10
+  current:
+    id: "seo-eundo_v1"
+    created: "2026-09-25"
+    ref_job_id: "cd82bdd4-e75a-448f-8ac1-940bfd562421"
+    local_master: "characters/eundo-malsseum/seo-eundo_v1/master.png"
+    description: >-
+      Slim oval face, short neatly combed snow-white hair with a left side part, thick white
+      eyebrows, deep smile lines around kind narrow dark-brown eyes, clean-shaven, a small faint
+      age spot on his left cheekbone, NO glasses. Default outfit: warm camel-colored knit
+      cardigan over a pale blue collared shirt, no tie.
+    differs_from_real_people: >-
+      Cố ý khác ảnh mục sư thật mà kênh đối thủ dùng (họ: kính không viền, blazer caro, áo hồng,
+      cười hở răng) — không kính, áo len camel, cười khép môi.
+  history: []                             # khi thay nhân vật: chuyển khối current xuống đây
+
+thumbnail_layout:
+  text_side: "left"
+  text_width_pct: 56                      # chữ chiếm ~55-60% ngang như các thumb viral cùng ngách
+  main_max_px: 150
+  sub_max_px: 64
+  overlay_alpha: 245                      # nền trái gần đen → chữ màu nổi tối đa
+
+# Kiểu chữ thumbnail (render_thumb.py chế độ "lines"). Rút ra từ 16 thumb top view
+# (từ khóa 천국 가족 / 목사 설교 / 노년의 신앙, khảo sát 2026-09-25):
+#   - font gothic siêu đậm, KHÔNG serif; viền đen dày + bóng đổ
+#   - 3 dòng, mỗi dòng 1 màu: dòng mồi màu lạnh (mint/cyan) → dòng khóa chữ trắng trên hộp đỏ
+#     → dòng chốt to nhất màu gradient vàng-cam; dòng caption trắng nhỏ
+#   - mint/cyan là màu bổ túc của nền nâu-hổ phách → tương phản mạnh nhất
+thumbnail_text_style:
+  font: "BlackHanSans-Regular.ttf"
+  styles:
+    top:     { color: "#7DF9E9", scale: 0.92, stroke: "#000000", stroke_ratio: 0.08 }
+    box:     { color: "#FFFFFF", box: "#E0141E", scale: 0.92, stroke: "#000000", stroke_ratio: 0.05, box_pad: 0.12 }
+    hero:    { gradient: ["#FFE259", "#FFA751"], scale: 1.15, stroke: "#000000", stroke_ratio: 0.08 }
+    white:   { color: "#FFFFFF", scale: 0.92, stroke: "#000000", stroke_ratio: 0.08 }
+    caption: { color: "#FFFFFF", scale: 0.36, stroke: "#000000", stroke_ratio: 0.10 }
+    hero_xl: { gradient: ["#FFE259", "#FFA751"], scale: 1.6, stroke: "#000000", stroke_ratio: 0.07 }
+  line_rules:
+    - "2-3 dòng chính + 1 caption tùy chọn; mỗi dòng ≤ 7 ký tự nếu được"
+    - "Mọi chữ phải lấy từ tiêu đề ⭐, không thêm nội dung mới"
+    - "Chọn 1 trong layout_variants theo công thức của tiêu đề ⭐"
+    - "KHÔNG dùng cùng variant với video liền trước (xem thumbnail.variant trong 06_series_state.json cũ); nếu tiêu đề chỉ hợp đúng variant đó → đổi thứ tự/đổi tiêu đề ⭐ sang phương án khác"
+    - "Không để 2 video liền nhau có dòng đầu tiên mở bằng cùng 1 từ khóa (vd 2 lần liền '천국...')"
+  layout_variants:                        # giữ cố định font/viền/bảng màu, chỉ đổi cách xếp dòng
+    A:
+      name: "Câu hỏi"
+      use_when: "Tiêu đề dạng câu hỏi (…까요?, …일까?) — công thức 'Câu hỏi + ~성경의 대답', 'Tuổi già + câu hỏi'"
+      pattern: ["top", "box", "hero"]
+      example: ["천국에서", "먼저 간 가족", "알아볼까요?"]
+    B:
+      name: "Nghịch lý / hiểu lại"
+      use_when: "Tiêu đề dạng 'X는 Y가 아닙니다', 'X의 진짜 의미' — công thức Hiểu lại"
+      pattern: ["box", "white", "hero"]         # dải đỏ lên đầu = câu phủ định gây sốc
+      example: ["고난이 아닙니다", "자기 십자가의", "진짜 의미"]
+    C:
+      name: "Con số"
+      use_when: "Tiêu đề có số N가지 / N단계 — công thức 'Bí mật N가지'"
+      pattern: ["top", "hero_xl", "box"]        # số rất to ở giữa
+      example: ["하나님이 숨기라 하신", "5가지", "드러내면 사라진다"]
+
+fonts:
+  title_main: "BlackHanSans-Regular.ttf"  # thumbnail — gothic siêu đậm (OFL, xem fonts/OFL-BlackHanSans.txt)
+  title_accent: "Cinzel-Bold.ttf"
+  body: "NotoSansKR-Regular.ttf"
+  sub_text: "NotoSansKR-Medium.ttf"
+
+title_formulas:                           # 25-45 ký tự (CLAUDE.md mục 5). KHÔNG dùng display_prefix trong tiêu đề.
+  # Cập nhật 2026-09-25 từ 172 video cùng ngách (xem output/2026-09-24_*/03_titles.md):
+  # tiêu đề viral = 2 vế ngăn bằng '｜' hoặc '?': vế 1 gây sốc/đồng cảm, vế 2 hứa đáp án có con số/cụm tìm kiếm.
+  preferred:
+    - "Nghịch lý con người ｜ câu hỏi tìm kiếm (예: 아내의 관 앞에서 목사도 답하지 못했습니다｜천국에서 먼저 간 가족을 알아볼까요)"
+    - "Câu hỏi tìm kiếm? + 성경이 분명히 말하는 N가지 대답/증거"
+    - "Nhận định trái trực giác ｜ lý do N가지 (예: 기도를 많이 할수록 더 지칩니다｜성경이 말하는 이유 N가지)"
+    - "Hiểu lại: X는 Y가 아닙니다 ｜ N가지 성경의 증거"
+    - "Gọi đúng người xem: ~한 분께 ｜ 성경이 분명히 말하는 N가지"
+  notes:
+    - "Vế 1 phải đứng được một mình (người xem có thể chỉ đọc tới đó)"
+    - "Vế 2 chứa cụm từ khóa người 60+ hay gõ (천국 가족, 먼저 간, 죽은 자, 노년 기도...)"
+    - "숫자는 3~6 사이 사용"
+    - "Tránh chép nguyên cụm đã bão hòa '성경이 밝히는 놀라운 진실' — dùng '분명히 말하는', '성경의 증거'"
+    - "Không dùng đuôi '| 태그 | 태그' → tag để ở hashtag mô tả"
+    - "display_prefix chỉ dùng trên thumbnail caption, không trong tiêu đề (kênh mới, tên chưa có sức kéo)"
+  avoid:
+    - "실존 목사 이름·호칭을 제목/태그/설명에 사용"
+    - "'반드시', '100%', '이것만 하면 치유' 등 과장·의학적 약속"
+    - "영어 제목 (경쟁 채널 데이터상 한국어 대비 조회수 크게 낮음)"
+
+cta:
+  soft_cta:
+    position_pct: [35, 45]
+    rule: "일화 직후 3문장 이내. '이 말씀이 필요한 분께 전해 주십시오' 식 공유 요청 우선"
+  hard_cta:
+    position: "ending"
+    rule: "다음 설교 주제 구체적 예고 필수 (모호한 구독 요청 금지)"
+  series_label_format: "OO번째 말씀"
+
+description_template:
+  disclosure_line: >
+    ※ 본 채널의 서은도 목사는 실존 인물이 아닌 가상의 인물이며, 설교 속 일화와
+    인물은 신앙적 메시지 전달을 위해 창작되었습니다. 인용된 성경 구절은 개역개정
+    성경을 따랐습니다. 특정 실존 목회자와 관련이 없습니다.
+  disclosure_position: "hashtag 앞, 절대 마지막 줄에 숨기지 않음"
+  no_timestamps: true                     # KHÔNG thêm mục lục thời gian (목차 00:00...) vào mô tả
+
+channel_about:
+  disclosure_required: true
+  disclosure_added: false                 # TODO: sau khi thêm dòng công bố vào About → đổi true + ghi ngày/ảnh chụp
+  evidence: ""
+
+keywords_default:
+  - 설교
+  - 노년의신앙
+  - 천국
+  - 부활
+  - 사별
+  - 위로
+  - 기도
+  - 성경
+  - 은도목사

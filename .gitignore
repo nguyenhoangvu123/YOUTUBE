@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# GitHub chặn file > 100MB — video stock tải lại từ nguồn khi cần
+source edit/video/*.mp4

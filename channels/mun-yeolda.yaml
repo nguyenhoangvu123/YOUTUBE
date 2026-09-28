@@ -1,0 +1,99 @@
+channel_id: mun-yeolda
+channel_name_kr: "열리는 문 | 간증"
+handle: "@열린문"
+language: ko
+niche: "기독교 간증 / 임사체험"
+
+tone:
+  pov: "1인칭 독백"
+  register: "저음, 진지, 감정적, 긴 침묵 허용"
+  sentence_style: "짧은 문장 위주, 반복되는 핵심 문장 1개 필수"
+
+video_length_minutes: [30, 40]
+narration: "AI TTS 1개 목소리, 시리즈 내내 고정"
+
+motif:
+  core_symbol: "문 (door)"
+  avoid_symbols:
+    - "빛만 단독으로 쓰는 구도 (경쟁 채널과 중복)"
+    - "십자가를 별도 도형으로 띄우는 구도 (경쟁 채널과 중복, 문에 새겨진 형태만 허용)"
+
+characters:
+  policy: "실존 인물 이름 사용 금지. 가상 인물 + 흔한 이름만 사용."
+  reused_pool:
+    - "의사 (김도현, 응급의학과 30년차)"
+    - "그의 아내 (예정: 2화)"
+    - "할머니 (1대, 1화에 등장, 배경 인물)"
+
+color_palette:
+  navy: "#0A1128"
+  gold: "#F5A623"
+  glow_white_gold: "#FFF4D6"
+
+thumbnail_bg:                             # ảnh nền thumbnail sinh bằng Higgsfield MCP (generate_image)
+  model: "gpt_image_2_5"                  # ảnh chân thực + nhận ảnh tham chiếu; xem models_explore, đổi model = sửa dòng này
+  aspect_ratio: "16:9"
+  palette_param: ""                       # model hiện tại không có tham số bảng màu → màu nằm trong prompt
+  reference_role: "image_references"      # role của medias khi truyền --ref (giữ gương mặt nhân vật giữa các tập)
+  params:                                 # tham số riêng của model, truyền nguyên văn
+    quality: "high"
+    resolution: "2k"
+  style: >-
+    Photorealistic cinematic film still for a Korean Christian testimony YouTube thumbnail,
+    16:9 landscape, shallow depth of field, high detail skin texture, dramatic rim light.
+  composition: >-
+    The main subject stands on the RIGHT side of the frame (occupying roughly the right 40%),
+    shown from the chest up, face sharply in focus, body slightly turned toward the left.
+    The LEFT 55% of the frame is darker and low in detail (soft-focus background only,
+    no objects or faces there) so large Korean headline text can be placed on it.
+  subject_style: >-
+    A completely fictional Korean man, NOT resembling any real, identifiable person, celebrity,
+    pastor or politician. Carries himself like a respected senior pastor giving a testimony:
+    calm, dignified, deeply moved, eyes glistening with restrained tears, lips closed,
+    gaze toward the viewer. Neat, modest clothing appropriate to his role in the story.
+
+thumbnail_layout:                         # render_thumb.py: vị trí chữ trên thumbnail (copy vào 05_thumb_text.json → layout)
+  text_side: "left"                       # left | bottom_center
+  text_width_pct: 50                      # chữ chỉ nằm trong 50% bên trái
+  main_max_px: 150
+  sub_max_px: 64
+
+fonts:
+  title_main: "NotoSerifKR-Black.ttf"     # 썸네일 메인 문구 (한글) — 굵고 격식 있는 느낌
+  title_accent: "Cinzel-Bold.ttf"         # 영문/숫자 보조 문구 (예: "EP.01") 전용, 한글에는 사용 불가
+  body: "NotoSansKR-Regular.ttf"          # 채널 설명, 자막 등 본문용
+  sub_text: "NotoSansKR-Medium.ttf"       # 썸네일 보조 문구
+
+title_formulas:
+  preferred:
+    - "숫자(연차) + 숫자(분) + 낡은 문/정체"
+    - "직업 모순형 (평생 A 해온 사람이 정작 B를 겪다)"
+  avoid:
+    - "국가/민족 중심 문구 (데이터상 조회수 저성능 확인됨)"
+
+cta:
+  soft_cta:
+    position_pct: [35, 45]
+    rule: "감정 절정 직후, 스토리 흐름 끊지 않고 3문장 이내로 삽입"
+  hard_cta:
+    position: "ending"
+    rule: "다음 화 구체적 예고 필수 (모호한 구독 요청 금지)"
+  series_label_format: "OO화"
+
+description_template:
+  disclosure_line: >
+    ※ 본 영상은 실제 인물이 아닌 가상의 인물과 상황을 바탕으로 창작된
+    이야기입니다. 특정 실존 인물의 경험이나 발언을 다룬 내용이 아니며,
+    신앙적 메시지 전달을 위한 창작 콘텐츠임을 밝힙니다.
+  disclosure_position: "hashtag 앞, 절대 마지막 줄에 숨기지 않음"
+
+keywords_default:
+  - 간증
+  - 임사체험
+  - 천국간증
+  - 지옥간증
+  - 신앙간증
+  - 기독교간증
+  - 열린문
+  - 회복이야기
+  - 용서
