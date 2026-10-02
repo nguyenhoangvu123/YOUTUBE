@@ -1,0 +1,28 @@
+{
+  "main_text": "드러내면 사라지는\n은혜 5가지",
+  "sub_text": "아내가 40년 동안\n숨긴 일",
+  "lines": [
+    {"text": "드러내면 사라지는", "style": "top"},
+    {"text": "은혜 5가지", "style": "hero_xl"},
+    {"text": "아내가 숨긴 일", "style": "box"}
+  ],
+  "caption": "40년 동안 목사인 저에게도 | 은도 목사",
+  "font_title": "BlackHanSans-Regular.ttf",
+  "styles": {
+    "top":     {"color": "#7DF9E9", "scale": 0.92, "stroke": "#000000", "stroke_ratio": 0.08},
+    "box":     {"color": "#FFFFFF", "box": "#E0141E", "scale": 0.92, "stroke": "#000000", "stroke_ratio": 0.05, "box_pad": 0.12},
+    "hero":    {"gradient": ["#FFE259", "#FFA751"], "scale": 1.15, "stroke": "#000000", "stroke_ratio": 0.08},
+    "white":   {"color": "#FFFFFF", "scale": 0.92, "stroke": "#000000", "stroke_ratio": 0.08},
+    "caption": {"color": "#FFFFFF", "scale": 0.36, "stroke": "#000000", "stroke_ratio": 0.10},
+    "hero_xl": {"gradient": ["#FFE259", "#FFA751"], "scale": 1.6, "stroke": "#000000", "stroke_ratio": 0.07}
+  },
+  "color_main": "#E8A33D",
+  "color_bg_overlay": "#2B1D14",
+  "layout": {
+    "text_side": "left",
+    "text_width_pct": 56,
+    "main_max_px": 150,
+    "sub_max_px": 64,
+    "overlay_alpha": 245
+  }
+}

@@ -225,9 +225,22 @@ Kiểu thumbnail viral của ngách (mỗi dòng 1 màu/kiểu). Vẫn giữ `ma
     "variant": "<A/B/C — variant bố cục chữ đã dùng, nếu kênh có layout_variants>",
     "first_line_keyword": "<từ khóa chính của dòng chữ đầu tiên>",
     "bg_variation": {"time": "...", "season": "...", "object": "...", "expression": "..."}
+  },
+  "upload": {
+    "planned_at": "YYYY-MM-DD HH:MM KST (= HH:MM giờ VN)",
+    "slot_rule": "<vd 'TUE 05:30 — slot kế tiếp sau tập trước'>"
   }
 }
 ```
+
+**Tính `upload.planned_at`** (nếu yaml kênh có `upload_schedule`):
+1. Lấy `upload.planned_at` trong `06_series_state.json` của video gần nhất cùng kênh
+   (nếu không có → dùng hôm nay).
+2. Chọn ngày gần nhất SAU mốc đó thuộc `upload_schedule.days`, giờ = `publish_time`
+   (múi `upload_schedule.timezone`). Không chọn slot đã trôi qua so với hôm nay.
+3. Ghi kèm giờ Việt Nam (KST − 2 tiếng) để người dùng hẹn giờ không nhầm.
+4. Ghi `planned_at` vào dòng cuối báo cáo hoàn thành, kèm nhắc: upload trước ≥ 3 tiếng,
+   để chế độ Hẹn giờ.
 
 ## Bước 7 — Sinh ảnh
 
@@ -295,6 +308,9 @@ Model và tham số lấy từ `channels/<channel_id>.yaml` → `thumbnail_bg`, 
 - [ ] Dòng công bố sáng tác có mặt nguyên văn trong `04_description.md`
 - [ ] Không có tên người thật cụ thể nào trong `02_script.txt`
 - [ ] `06_series_state.json` đã ghi lại lời hứa tập sau (nếu kịch bản có hứa)
+- [ ] `upload.planned_at` đúng ngày/giờ trong `upload_schedule`, mùa trên thumbnail khớp ngày đăng đó
+- [ ] Nếu số video của kênh đã đạt `upload_schedule.review.after_videos` mà
+      `review.last_reviewed` còn trống → nhắc người dùng xem giờ người xem thật trong Studio
 
 Nếu bất kỳ mục nào không đạt, KHÔNG báo hoàn thành — sửa lại trước.
 

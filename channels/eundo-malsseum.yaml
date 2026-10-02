@@ -216,6 +216,22 @@ channel_about:
   disclosure_added: false                 # TODO: sau khi thêm dòng công bố vào About → đổi true + ghi ngày/ảnh chụp
   evidence: ""
 
+upload_schedule:                          # lịch đăng — gợi ý ban đầu 2026-09-30, CHƯA có số liệu thật
+  timezone: "Asia/Seoul"                  # KST = giờ Việt Nam + 2 tiếng
+  publish_time: "05:30"                   # 05:30 KST = 03:30 VN; bắt khung 새벽기도 5-7h, khớp signature_closing "내일 새벽에"
+  days: ["TUE", "THU", "SAT"]             # 3 video/tuần; lệch ngày với mun-yeolda (WED/FRI/SUN)
+  visibility: "scheduled"                 # upload trước ≥ 3 tiếng, để chế độ Hẹn giờ (xử lý xong bản HD trước giờ đăng)
+  shorts:
+    per_week: 3                           # cắt đoạn 30-50s cảm xúc nhất / câu핵심 반복, gắn "video liên quan" về video dài
+    publish_time: "12:00"                 # khung nghỉ trưa, đăng vào ngày KHÔNG có video dài (MON/WED/FRI)
+  rules:
+    - "Giữ nguyên giờ + ngày ít nhất 4 tuần trước khi đổi — đều đặn quan trọng hơn giờ đẹp"
+    - "Không đăng cùng giờ với kênh mun-yeolda"
+    - "Mùa của cây hồng trên thumbnail phải khớp ngày đăng dự kiến (không phải ngày làm video)"
+  review:
+    after_videos: 12                      # đủ 12 video → xem Studio → Người xem → 'Thời điểm người xem truy cập YouTube'
+    last_reviewed: ""                     # ghi ngày + giờ mới khi đã chỉnh theo số liệu thật
+
 keywords_default:
   - 설교
   - 노년의신앙

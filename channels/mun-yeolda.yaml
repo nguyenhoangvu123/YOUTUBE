@@ -87,6 +87,22 @@ description_template:
     신앙적 메시지 전달을 위한 창작 콘텐츠임을 밝힙니다.
   disclosure_position: "hashtag 앞, 절대 마지막 줄에 숨기지 않음"
 
+upload_schedule:                          # lịch đăng — gợi ý ban đầu 2026-09-30, CHƯA có số liệu thật
+  timezone: "Asia/Seoul"                  # KST = giờ Việt Nam + 2 tiếng
+  publish_time: "19:00"                   # 19:00 KST = 17:00 VN; lên đề xuất kịp khung nghe trước khi ngủ 20-23h
+  days: ["WED", "FRI", "SUN"]             # 3 video/tuần; lệch ngày với eundo-malsseum (TUE/THU/SAT)
+  visibility: "scheduled"                 # upload trước ≥ 3 tiếng, để chế độ Hẹn giờ (xử lý xong bản HD trước giờ đăng)
+  shorts:
+    per_week: 3                           # cắt đoạn 30-50s cao trào / câu핵심 반복, gắn "video liên quan" về video dài
+    publish_time: "21:00"                 # đăng vào ngày KHÔNG có video dài (MON/TUE/THU)
+  rules:
+    - "Giữ nguyên giờ + ngày ít nhất 4 tuần trước khi đổi — đều đặn quan trọng hơn giờ đẹp"
+    - "Không đăng cùng giờ với kênh eundo-malsseum"
+    - "Tập nối tiếp (hard CTA hứa tập sau) phải lên đúng slot kế tiếp, không bỏ trống lịch giữa 2 tập cùng series"
+  review:
+    after_videos: 12                      # đủ 12 video → xem Studio → Người xem → 'Thời điểm người xem truy cập YouTube'
+    last_reviewed: ""                     # ghi ngày + giờ mới khi đã chỉnh theo số liệu thật
+
 keywords_default:
   - 간증
   - 임사체험
