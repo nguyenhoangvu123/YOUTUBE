@@ -87,19 +87,22 @@ thumbnail_bg:
     Photorealistic cinematic film still for a Korean Christian sermon YouTube thumbnail,
     16:9 landscape, warm amber lamplight, shallow depth of field, high detail skin texture.
   composition: >-
-    The main subject sits on the RIGHT side of the frame (roughly the right 40%), chest up,
-    at a wooden desk with an old open Bible under a small desk lamp, face sharply in focus.
+    The main subject is on the RIGHT side of the frame (roughly the right 40%), face sharply in focus,
+    in the study with a small warm desk lamp. Shot size and pose follow the "Main subject" line.
     The LEFT 55% of the frame is dark warm brown and low in detail (soft-focus bookshelves only,
     no objects or faces there) so large Korean headline text can be placed on it.
   variation_rules:                        # nền thumbnail đổi mỗi tập để feed không lặp hình (gương mặt giữ nguyên qua --ref)
     - "Thời điểm: xoay vòng đêm khuya / rạng sáng xanh / chiều hoàng hôn — không trùng tập liền trước"
     - "Mùa của cây hồng ngoài cửa sổ phải khớp ngày đăng (9-11: quả chín cam; 12-2: cành trụi, tuyết; 3-5: lá non; 6-8: lá xanh đậm)"
     - "Đồ vật trong tay lấy từ kịch bản tập đó (Kinh Thánh, tách trà, lá thư, ảnh cũ...) — không trùng tập liền trước"
-    - "Biểu cảm theo cao trào kịch bản: mỉm cười ấm / trầm ngâm / rưng rưng / nhắm mắt cầu nguyện"
+    - "Biểu cảm theo cao trào kịch bản: rưng rưng / sững sờ / trầm ngâm / nhắm mắt cầu nguyện — phải đọc ra cảm xúc ở cỡ ảnh điện thoại; tránh nụ cười hiền bình thản (CTR tập 2 chỉ 1,9%, xem learnings)"
+    - "Cỡ cảnh xoay vòng, không trùng tập liền trước: cận mặt (mặt cao ≥ 40% khung) / trung cảnh ngồi bàn / cận đồ vật (thư, ảnh, Kinh Thánh) với nhân vật mờ phía sau"
+    - "Đồ vật then chốt phải đủ to để nhận ra trên điện thoại (≥ 15% khung), không phải chi tiết nhỏ trên bàn"
+    - "Chữ thumbnail tông ấm → nền nên lạnh hơn (xanh rạng sáng / đêm xanh) hoặc tối hẳn phía sau chữ"
     - "Ghi lựa chọn vào 06_series_state.json → thumbnail.bg_variation"
   subject_style: >-
     A completely fictional elderly Korean man around 78 years old, NOT resembling any real,
-    identifiable person, celebrity, pastor or politician. Looking at the viewer with quiet warmth.
+    identifiable person, celebrity, pastor or politician. Expression follows the "Main subject" line.
     No clerical collar, no logos.
 
 # Nhân vật trên thumbnail — 1 gương mặt cố định cho ~10 video rồi thay (make_bg.py tự dùng làm --ref).
@@ -145,7 +148,9 @@ thumbnail_text_style:
     caption: { color: "#FFFFFF", scale: 0.36, stroke: "#000000", stroke_ratio: 0.10 }
     hero_xl: { gradient: ["#FFE259", "#FFA751"], scale: 1.6, stroke: "#000000", stroke_ratio: 0.07 }
   line_rules:
-    - "2-3 dòng chính + 1 caption tùy chọn; mỗi dòng ≤ 7 ký tự nếu được"
+    - "TỐI ĐA 3 dòng tính cả caption; mỗi dòng ≤ 7 ký tự nếu được. Caption chỉ còn '은도 목사' hoặc bỏ — caption dài không đọc được trên điện thoại"
+    - "Dòng to nhất (hero) = phần CỤ THỂ + CẢM XÚC nhất của tiêu đề (con người, bí mật, nỗi sợ, mất mát); khái niệm trừu tượng (은혜, 말씀...) và con số chỉ làm dòng phụ — trừ khi con số chính là móc"
+    - "Thumb BỔ SUNG cho tiêu đề, không chép nguyên vế 2 của tiêu đề"
     - "Mọi chữ phải lấy từ tiêu đề ⭐, không thêm nội dung mới"
     - "Chọn 1 trong layout_variants theo công thức của tiêu đề ⭐"
     - "KHÔNG dùng cùng variant với video liền trước (xem thumbnail.variant trong 06_series_state.json cũ); nếu tiêu đề chỉ hợp đúng variant đó → đổi thứ tự/đổi tiêu đề ⭐ sang phương án khác"
@@ -231,6 +236,25 @@ upload_schedule:                          # lịch đăng — gợi ý ban đầ
   review:
     after_videos: 12                      # đủ 12 video → xem Studio → Người xem → 'Thời điểm người xem truy cập YouTube'
     last_reviewed: ""                     # ghi ngày + giờ mới khi đã chỉnh theo số liệu thật
+
+# Cắt dòng + canh giờ phụ đề (tools/make_sub.py). Style hiển thị (font, màu, viền) nằm ở CapCut, xem memory capcut-subtitle-style.
+subtitle:
+  max_chars: 20                           # CapCut: ~14 ký tự TB, tối đa 22; sub 1 dòng
+  min_chars: 6
+  silence_db: -45                         # dưới ngưỡng này (so với FS) = khoảng lặng của TTS
+  min_pause_sec: 0.09
+  min_snap_pause_sec: 0.12                # dấu câu chỉ gắn vào khoảng lặng ≥ giá trị này
+  snap_window_sec: 0.8
+  dip_window_sec: 0.12                    # cụm không có khoảng lặng: kéo ranh giới về chỗ năng lượng thấp nhất trong ±0.12s
+
+# Khoảng nghỉ chèn vào audio TTS (tools/add_pauses.py). Chi tiết từng điểm: output/<video>/02_pauses.json
+pauses:
+  default_sec: 0.35                       # nghỉ thêm giữa các đoạn (tổng ≈ 0,75s như tập 2, cộng ~0,4s lặng tự nhiên)
+  guideline:
+    - "Sau câu hỏi dành cho người xem: 1,5-2s"
+    - "Trước/sau câu Kinh Thánh trích dẫn: 1,2-1,3s; giới thiệu số chương/câu: 0,8s"
+    - "Câu chốt lặp (core sentence): sau 1,8-2s"
+    - "Cao trào (lời vợ, ghi chú lề): 1,5-2,5s; hook 30s đầu không quá 1s mỗi chỗ"
 
 keywords_default:
   - 설교

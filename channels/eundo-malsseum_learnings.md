@@ -49,13 +49,24 @@ phần giải thích tiếng Hy Lạp (σπείρεται / ἐγείρεται,
 
 ## Lỗi đã từng mắc — KHÔNG lặp lại
 
-_(chưa có — điền sau video đầu tiên; áp dụng luôn các lỗi chung trong mun-yeolda_learnings.md)_
+_(áp dụng luôn các lỗi chung trong mun-yeolda_learnings.md)_
+
+1. **Tập 2 (2026-10-03) đặt hẹn giờ sai** → lên sóng 10:00 VN (12:00 KST) thay vì 05:30 KST.
+   Vẫn đăng để giữ nhịp T3/T5/T7. → Khi hẹn giờ trong Studio, kiểm tra múi giờ hiển thị:
+   05:30 KST = **03:30 giờ VN**.
+
+2. **Tập 2 (2026-10-03) hook trừu tượng + trả lời chậm** → câu mở là châm ngôn quen thuộc ("오른손이 하는 것을…"), twist (vợ là 'thiên thần vô danh') tới phút 5,9; cảnh báo thần học "3+2" ở phút 2,4; đọc Kinh Thánh trước chuyện. AVD ≈ 25% (7:55/32:13, mẫu 19 views — chưa đủ kết luận). → Câu 1 = việc/cảnh cụ thể; twist ≤ câu 4; chuyện trước, Kinh Thánh sau; lưu ý giáo phái sau phút 5; mỗi ~4-5 phút mở/trả 1 vòng tò mò. Áp dụng từ tập 3.
+3. **Thumb tập 2: chữ to nhất là khái niệm ("은혜 5가지") + mặt cười bình thản** → CTR 1,9%. Tập 3: chữ to nhất = người + lời nói cụ thể, mặt cảm xúc, cận mặt.
 
 ## Hiệu suất thực tế theo từng video
 
-| Ngày đăng | Tiêu đề | Cụm chủ đề | Thumb variant | CTR | Views 48h | Views 7 ngày | Sub gained | Ghi chú |
-|---|---|---|---|---|---|---|---|---|
-| _(chưa có dữ liệu)_ | | | | | | | | |
+Mỗi lần đo = 1 dòng (cùng video có thể nhiều dòng theo ngày đo). Số liệu lấy từ YouTube Studio.
+Cột có dấu `≈` là tự tính: AVD ≈ thời gian xem ÷ views; views từ hiển thị ≈ hiển thị × CTR.
+
+| Ngày đăng | Tiêu đề | Cụm chủ đề | Thumb variant | Ngày đo | Hiển thị thumb | CTR | Views | Thời gian xem (giờ) | AVD (% thời lượng) | Sub gained | Ghi chú |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| _(tập 1 — Studio chưa phân bổ số liệu, tính đến 2026-10-05)_ | 아내의 관 앞에서 목사도 답하지 못했습니다｜천국에서 먼저 간 가족을 알아볼까요 | Thiên đàng | A (Câu hỏi) | | | | | | | | |
+| 2026-10-03 (T7) 10:00 VN = 12:00 KST — lệch slot 05:30 KST | 아내가 40년 동안 목사인 저에게도 숨긴 일｜드러내면 사라지는 은혜 5가지 | Bí mật | C (Con số) | từ lúc đăng → 2026-10-05 (~2 ngày, ≈ mốc 48h) | 674 | 1,9% | 19 | 2,3 | 7:55 / 32:13 ≈ 25% | 0 | Tỷ lệ giữ chân: Studio chưa hiển thị (quá ít views). ≈ 13 views từ hiển thị, ~6 từ nguồn ngoài (link/trực tiếp). CTR thấp hơn mức 4-5% thường thấy ở kênh mới → nghi thumb/tiêu đề chưa đủ hút với khán giả 60+. Đăng trưa thay vì sáng sớm → khi so sánh với video khác phải tính đến yếu tố giờ đăng |
 
 ## Giả thuyết đang thử nghiệm
 
@@ -66,3 +77,8 @@ _(chưa có — điền sau video đầu tiên; áp dụng luôn các lỗi chun
 - Thumbnail: 3 variant bố cục (A câu hỏi / B nghịch lý / C con số, xem yaml
   `thumbnail_text_style.layout_variants`) — variant nào CTR cao nhất với khán giả 60+?
   → Cần ≥ 3 video/variant; dùng thêm "Thử nghiệm và so sánh" của YouTube Studio.
+- **A/B tập 2 (bắt đầu 2026-10-05)**, sau khi thumb gốc chỉ đạt CTR 1,9%: gốc (khái niệm "은혜 5가지" làm
+  chữ to nhất, mỉm cười bình thản) vs test1 (chữ to nhất "아내가 40년 / 숨긴 일", cận mặt rưng rưng) vs test2
+  ("아내가 숨긴 일" + số 5 to, mẩu giấy to ở tiền cảnh). Giả thuyết: câu cụ thể có con người + mặt có cảm xúc
+  > khái niệm trừu tượng. Chi tiết: `output/2026-10-01_vo-muc-su-giau-kin/06_series_state.json` →
+  `thumbnail.ab_test`. → Điền bên thắng khi Studio báo kết quả.
