@@ -1,0 +1,29 @@
+{
+  "main_text": "혼자 남은 노년\n하나님은 어디 계십니까",
+  "sub_text": "읽지 못한 구절",
+  "lines": [
+    {"text": "혼자 남은 노년", "style": "top"},
+    {"text": "하나님은", "style": "box"},
+    {"text": "어디 계십니까?", "style": "hero"}
+  ],
+  "caption": "은도 목사",
+  "font_title": "BlackHanSans-Regular.ttf",
+  "variant": "A",
+  "color_main": "#E8A33D",
+  "color_bg_overlay": "#2B1D14",
+  "layout": {
+    "text_side": "left",
+    "text_width_pct": 56,
+    "main_max_px": 150,
+    "sub_max_px": 64,
+    "overlay_alpha": 245
+  },
+  "styles": {
+    "top":     { "color": "#7DF9E9", "scale": 0.92, "stroke": "#000000", "stroke_ratio": 0.08 },
+    "box":     { "color": "#FFFFFF", "box": "#E0141E", "scale": 0.92, "stroke": "#000000", "stroke_ratio": 0.05, "box_pad": 0.12 },
+    "hero":    { "gradient": ["#FFE259", "#FFA751"], "scale": 1.15, "stroke": "#000000", "stroke_ratio": 0.08 },
+    "white":   { "color": "#FFFFFF", "scale": 0.92, "stroke": "#000000", "stroke_ratio": 0.08 },
+    "caption": { "color": "#FFFFFF", "scale": 0.36, "stroke": "#000000", "stroke_ratio": 0.10 },
+    "hero_xl": { "gradient": ["#FFE259", "#FFA751"], "scale": 1.6, "stroke": "#000000", "stroke_ratio": 0.07 }
+  }
+}
