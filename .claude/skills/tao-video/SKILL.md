@@ -135,6 +135,55 @@ tra lại — không chuyển sang Bước 3 khi còn mục chưa đạt.
 Nếu mọi mục đều đạt, mới được coi `02_script.txt` là bản hoàn chỉnh và
 chuyển sang Bước 3.
 
+## Bước 2.6 — Kế hoạch khoảng nghỉ `02_pauses.json` (ngay sau khi chốt `02_script.txt`)
+
+Giọng TTS mặc định đọc đều, ít nghỉ → cao trào bị phẳng (tập 3 đo được: chỉ 1 chỗ nghỉ ≥ 1,5s,
+tập 2 có 20). Vì vậy KỊCH BẢN KHÔNG TỰ HOÀN CHỈNH nếu thiếu kế hoạch nghỉ.
+
+1. Đánh số đoạn đúng như `tools` hiểu: mỗi đoạn cách nhau 1 dòng trống trong `02_script.txt`
+   = 1 file `02_script/N.mp3` khi sinh giọng. Giữ nguyên cách ngắt đoạn này khi người dùng sinh TTS.
+2. Viết `output/<slug>/02_pauses.json` theo schema trong docstring `tools/add_pauses.py`:
+   `default_sec` (lấy `pauses.default_sec` trong yaml), `after_para` (nghỉ THÊM sau đoạn N), `inside`
+   (nghỉ sau 1 câu trong đoạn). Dùng `pauses.guideline` trong yaml kênh làm chuẩn:
+   - sau câu hỏi dành cho người xem: 1,5-2s
+   - trước/sau câu Kinh Thánh trích dẫn: 1,2-1,3s; câu giới thiệu chương/câu: ~0,8s
+   - sau mỗi lần lặp câu đóng đinh: 1,8-2s
+   - cao trào (lời nhân vật quan trọng, ghi chú/thư): 1,5-2,5s, đặt cả TRƯỚC và SAU câu then chốt
+   - hook 30 giây đầu: mỗi chỗ nghỉ ≤ 1s (nghỉ dài ở đầu video làm rụng người xem)
+   - tổng thời lượng sau khi chèn phải nằm trong `video_length_minutes` của yaml
+3. Mỗi mục `inside[].after` phải là CÂU NGUYÊN VĂN có trong đoạn đó (tool tìm bằng chuỗi con).
+4. Báo người dùng: (a) sinh TTS theo đúng cách ngắt đoạn, (b) giữ 1 file mp3 riêng cho mỗi đoạn
+   (`02_script/N.mp3`) + `02_script_full.mp3` + `02_script_full.srt` trong thư mục video.
+
+## Bước 2.7 — Kiểm tra giọng đọc + chèn nghỉ + sub (CHỈ khi người dùng đã sinh xong giọng)
+
+`tao-video` không tự sinh giọng. Khi người dùng báo đã có audio trong `output/<slug>/`
+(hoặc yêu cầu "check giọng"), chạy theo thứ tự — KHÔNG nghe được audio, chỉ đo, nên luôn nói rõ
+giới hạn này khi báo cáo:
+
+1. `python tools/voice_check.py --channel <id> --dir output/<slug>` → `voice_report.md`.
+   Báo các cờ đỏ (cao độ lệch giọng mẫu, tốc độ lệch > 12%, ít nghỉ dài, tốc độ quá đều).
+2. `python tools/asr_check.py --dir output/<slug>` (faster-whisper large-v2, chạy `HF_HUB_OFFLINE=1`
+   nếu model đã có trong cache; máy yếu RAM → chạy CPU int8, mất 30-90 phút, chạy nền và lưu tiến độ
+   vào `asr_raw.json`). Đọc `asr_report.md`. ASR cũng nghe nhầm — lệch số (Hán-Hàn vs chữ số), nối âm
+   (걸음→거름, 잃을→이를), ảo giác ở cuối đoạn là bình thường. Chỉ báo "cần nghe lại" cho: câu trích
+   Kinh Thánh, số chương/câu, nghĩa bị đổi (vd 주께→죽게, 이를→일을), tên riêng/từ khóa của tập.
+   Không sửa audio/kịch bản dựa riêng vào ASR; người dùng nghe xác nhận rồi mới sinh lại đoạn đó.
+3. `python tools/add_pauses.py --channel <id> --dir output/<slug>` → `02_script_full_pauses.mp3` +
+   `02_pauses_timeline.json` (giữ nguyên `02_script_full.mp3` gốc). Đọc CẢNH BÁO: "cắt ước lượng" =
+   không có khoảng lặng thật tại chỗ đó → báo người dùng nghe lại.
+4. Tạo sub khớp audio mới:
+   `python tools/make_sub.py --channel <id> --dir output/<slug> --audio 02_script_full_pauses.mp3 --timeline 02_pauses_timeline.json --out 02_script_sub_pauses.srt`
+   Kiểm tra log "Lệch vị trí" ≤ ±0,05s và sub ghép lại bằng đúng `02_script.txt`.
+5. Chạy lại `voice_check.py --audio 02_script_full_pauses.mp3` để xác nhận số chỗ nghỉ ≥ 1,5s và độ dài
+   nằm trong `video_length_minutes`; nếu > 2× tập trước thì cảnh báo "có thể chậm", gợi ý giảm ở đoạn giải thích.
+6. Báo người dùng RÕ cặp file dùng trong CapCut: `02_script_full_pauses.mp3` + `02_script_sub_pauses.srt`
+   (không ghép chéo với bản gốc). Nếu phải sinh lại 1 đoạn TTS → chạy lại bước 3-4.
+7. Không commit file mp3 (nặng); commit `02_pauses.json`, `02_pauses_timeline.json`, các `.srt`, `asr_*`, `voice_report.md`.
+
+Học hỏi: nếu phát hiện lỗi giọng mới (vd TTS đọc sai 1 từ khóa lặp lại), thêm vào "Lỗi đã từng mắc" trong
+`channels/<id>_learnings.md`.
+
 ## Bước 3 — `03_titles.md`
 
 - Sinh 5-8 phương án theo `title_formulas.preferred` trong yaml kênh.
@@ -309,6 +358,7 @@ Model và tham số lấy từ `channels/<channel_id>.yaml` → `thumbnail_bg`, 
 - [ ] Không có tên người thật cụ thể nào trong `02_script.txt`
 - [ ] `06_series_state.json` đã ghi lại lời hứa tập sau (nếu kịch bản có hứa)
 - [ ] `upload.planned_at` đúng ngày/giờ trong `upload_schedule`, mùa trên thumbnail khớp ngày đăng đó
+- [ ] `02_pauses.json` đã có (Bước 2.6); nếu người dùng đã có audio → đã chạy Bước 2.7 và báo rõ cặp mp3 + srt dùng trong CapCut
 - [ ] Nếu số video của kênh đã đạt `upload_schedule.review.after_videos` mà
       `review.last_reviewed` còn trống → nhắc người dùng xem giờ người xem thật trong Studio
 

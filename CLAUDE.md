@@ -7,10 +7,18 @@ Skill `tao-video` PHẢI đọc và tuân thủ file này trước khi sinh bấ
 
 - KHÔNG bịa số liệu, thống kê, trích dẫn khoa học/y tế/lịch sử nếu không có
   nguồn trong `01_ideas.md` hoặc tài liệu người dùng cung cấp.
-- KHÔNG gán tên, chức danh, hoặc trải nghiệm hư cấu cho một người có thật,
-  có tên tuổi cụ thể, còn sống hoặc mới mất gần đây. Nhân vật kể chuyện
-  PHẢI là hư cấu hoàn toàn, hoặc ẩn danh hóa (vd: "một mục sư", "một bác sĩ",
-  không dùng tên riêng thật của người có thật).
+- Được phép dùng tên người có thật (vd: 신성종 목사) làm nhân vật/người dẫn chuyện,
+  theo quyết định của chủ dự án (cập nhật 2026-10-09). Điều kiện đi kèm:
+  - Không bịa tiểu sử, chức danh, hội thánh, số liệu hay lời trích dẫn rồi trình bày
+    như sự thật về người đó. Mọi chi tiết đời thực chỉ dùng khi có nguồn trong
+    `01_ideas.md` hoặc tài liệu người dùng cung cấp.
+  - Phần sáng tác/hư cấu (lời kể, tình huống, hội thoại) phải được công bố rõ trong
+    `04_description.md` (xem dòng công bố bên dưới), không để người xem tưởng là
+    lời/việc có thật của người đó.
+  - Không đặt vào miệng người có thật nội dung xúc phạm, sai lệch giáo lý, hoặc
+    gây hại cho danh dự của họ.
+  - Người khác (không phải nhân vật chính đã được chủ dự án chỉ định) vẫn nên
+    ẩn danh hóa ("một mục sư", "một bác sĩ").
 - Mỗi video BẮT BUỘC có dòng công bố nội dung sáng tác/chuyển thể trong
   `04_description.md`, đặt trước phần hashtag, không giấu ở cuối cùng.
 - Mỗi kênh BẮT BUỘC có dòng công bố tương tự trong phần mô tả kênh (About) —
@@ -32,6 +40,10 @@ output/YYYY-MM-DD_slug-khong-dau/
 
 - `slug-khong-dau`: chữ thường, không dấu tiếng Việt/Hàn, nối bằng gạch ngang,
   tối đa 5 từ, mô tả nhân vật/chủ đề chính (vd: `bac-si-canh-cua`).
+- Ngoài 8 file trên, được thêm file phát sinh khi dựng giọng/sub (cùng thư mục video, tiền tố `02_`):
+  `02_script/N.mp3`, `02_script_full.mp3`, `02_script_full.srt`, `02_pauses.json`,
+  `02_script_full_pauses.mp3`, `02_script_sub_pauses.srt`, `voice_report.md`, `asr_report.md`...
+  Không commit file mp3 (nặng, sinh lại được).
 - Không thêm/bớt số thứ tự, không đổi tên file giữa các video khác nhau —
   `tools/render_thumb.py` và các script khác phụ thuộc vào tên cố định này.
 
@@ -67,3 +79,6 @@ output/YYYY-MM-DD_slug-khong-dau/
    rồi `tools/make_bg.py --from` chuẩn hóa → `thumb_bg.png`
 5. Gọi `tools/render_thumb.py` ghép chữ → `thumb_final.png`
 6. Kiểm tra chéo: tiêu đề trong `03_titles.md` khớp chữ trên `thumb_final.png`
+7. Sau kịch bản: viết `02_pauses.json` (kế hoạch khoảng nghỉ). Khi người dùng đã sinh giọng:
+   `tools/voice_check.py` → `tools/asr_check.py` → `tools/add_pauses.py` → `tools/make_sub.py`
+   (chi tiết: skill `tao-video` Bước 2.6-2.7)

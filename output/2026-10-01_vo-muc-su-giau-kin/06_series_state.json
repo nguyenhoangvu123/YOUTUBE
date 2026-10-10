@@ -54,6 +54,42 @@
       "season": "đầu tháng 10 — hồng chín cam đậm ngoài cửa sổ (khớp ngày đăng 2026-10-03)",
       "object": "bó mẩu giấy cũ ố vàng cầm hai tay",
       "expression": "trầm ngâm, nụ cười nhẹ"
+    },
+    "ab_test": {
+      "started": "2026-10-05",
+      "tool": "YouTube Studio — Thử nghiệm và so sánh",
+      "reason": "CTR 1,9% sau ~2 ngày (674 hiển thị) với thumb gốc",
+      "variants": {
+        "original": {
+          "file": "thumb_final.png",
+          "lines": [
+            "드러내면 사라지는",
+            "은혜 5가지",
+            "아내가 숨긴 일"
+          ],
+          "bg": "trung cảnh ngồi bàn, mỉm cười bình thản"
+        },
+        "test1": {
+          "file": "thumb_tests/test1_final.png",
+          "lines": [
+            "목사인 저에게도",
+            "아내가 40년",
+            "숨긴 일"
+          ],
+          "bg": "cận mặt, rưng rưng, cầm mẩu giấy sát mặt, rạng sáng xanh",
+          "job_id": "1068cf78-c0ae-4ba1-9c0d-2f406c8b5466"
+        },
+        "test2": {
+          "file": "thumb_tests/test2_final.png",
+          "lines": [
+            "아내가 숨긴 일",
+            "은혜 5가지"
+          ],
+          "bg": "mẩu giấy lịch cũ to ở tiền cảnh, đêm xanh, Kinh Thánh mở",
+          "job_id": "28ff9ceb-36c3-4578-8153-4b51c0464fe3"
+        }
+      },
+      "winner": null
     }
   },
   "upload": {

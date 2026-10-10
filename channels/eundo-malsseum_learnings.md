@@ -58,6 +58,14 @@ _(áp dụng luôn các lỗi chung trong mun-yeolda_learnings.md)_
 2. **Tập 2 (2026-10-03) hook trừu tượng + trả lời chậm** → câu mở là châm ngôn quen thuộc ("오른손이 하는 것을…"), twist (vợ là 'thiên thần vô danh') tới phút 5,9; cảnh báo thần học "3+2" ở phút 2,4; đọc Kinh Thánh trước chuyện. AVD ≈ 25% (7:55/32:13, mẫu 19 views — chưa đủ kết luận). → Câu 1 = việc/cảnh cụ thể; twist ≤ câu 4; chuyện trước, Kinh Thánh sau; lưu ý giáo phái sau phút 5; mỗi ~4-5 phút mở/trả 1 vòng tò mò. Áp dụng từ tập 3.
 3. **Thumb tập 2: chữ to nhất là khái niệm ("은혜 5가지") + mặt cười bình thản** → CTR 1,9%. Tập 3: chữ to nhất = người + lời nói cụ thể, mặt cảm xúc, cận mặt.
 
+## Công thức hook đang áp dụng (từ tập 3-4, CHƯA có dữ liệu AVD để xác nhận)
+
+- Câu 1 = hành động/cảnh cụ thể người xem tự nhận ra (không châm ngôn, không bối cảnh); câu 3 = nghịch lý của mục sư; câu 4 = mở vòng (1 câu Kinh Thánh/vật chưa nói rõ). ≤ 80 từ.
+- Trả vòng #1 trong ≤ 5 phút; mỗi ~5-6 phút mở/trả 1 vòng mới; có ≥ 1 câu hỏi trực tiếp người xem trong 8 phút đầu.
+- Sửa công khai điều mình nói sai ở tập trước (vd tập 4 sửa "가장 가까이") → tăng uy tín, không giấu.
+- Luân phiên cách mở: tập 3 = việc mục sư đã nói; tập 4 = hình ảnh đời thường (điện thoại không reo). Đừng để 2 tập liền cùng kiểu.
+- Cao trào tập 4 là hành động của nhân vật (gọi điện cho con), không phải ghi chú lề của vợ → tránh công thức "mở trang Kinh Thánh của vợ" lặp lại 4 tập liền.
+
 ## Hiệu suất thực tế theo từng video
 
 Mỗi lần đo = 1 dòng (cùng video có thể nhiều dòng theo ngày đo). Số liệu lấy từ YouTube Studio.

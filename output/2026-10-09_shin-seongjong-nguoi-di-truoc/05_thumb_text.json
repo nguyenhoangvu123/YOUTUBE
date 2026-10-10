@@ -1,0 +1,76 @@
+{
+  "main_text": "먼저 떠난 이들은\n무엇을 할까요",
+  "sub_text": "성경이 말하는 3가지",
+  "lines": [
+    {
+      "text": "먼저 떠난 이들은",
+      "style": "top"
+    },
+    {
+      "text": "3가지",
+      "style": "hero_xl"
+    },
+    {
+      "text": "무엇을 할까요?",
+      "style": "box"
+    }
+  ],
+  "caption": "신성종 목사",
+  "font_title": "BlackHanSans-Regular.ttf",
+  "variant": "C",
+  "color_main": "#E8A33D",
+  "color_bg_overlay": "#2B1D14",
+  "layout": {
+    "text_side": "left",
+    "text_width_pct": 56,
+    "main_max_px": 150,
+    "sub_max_px": 64,
+    "overlay_alpha": 70
+  },
+  "styles": {
+    "top": {
+      "color": "#7DF9E9",
+      "scale": 0.92,
+      "stroke": "#000000",
+      "stroke_ratio": 0.08
+    },
+    "box": {
+      "color": "#FFFFFF",
+      "box": "#E0141E",
+      "scale": 0.92,
+      "stroke": "#000000",
+      "stroke_ratio": 0.05,
+      "box_pad": 0.12
+    },
+    "hero": {
+      "gradient": [
+        "#FFE259",
+        "#FFA751"
+      ],
+      "scale": 1.15,
+      "stroke": "#000000",
+      "stroke_ratio": 0.08
+    },
+    "white": {
+      "color": "#FFFFFF",
+      "scale": 0.92,
+      "stroke": "#000000",
+      "stroke_ratio": 0.08
+    },
+    "caption": {
+      "color": "#FFFFFF",
+      "scale": 0.36,
+      "stroke": "#000000",
+      "stroke_ratio": 0.1
+    },
+    "hero_xl": {
+      "gradient": [
+        "#FFE259",
+        "#FFA751"
+      ],
+      "scale": 1.6,
+      "stroke": "#000000",
+      "stroke_ratio": 0.07
+    }
+  }
+}

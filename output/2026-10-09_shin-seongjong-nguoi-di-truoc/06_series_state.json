@@ -1,0 +1,64 @@
+{
+  "channel_id": "eundo-malsseum",
+  "episode_date": "2026-10-09",
+  "episode_title": "[신성종 목사] 먼저 떠난 이들은 지금 무엇을 할까~성경이 말하는 3가지 진실",
+  "series_label": "다섯 번째 말씀",
+  "narrator_change": "Từ tập 5 người dẫn là 신성종 목사 (người có thật, quyết định của chủ dự án 2026-10-09, phương án B). Tập 1-4 do nhân vật hư cấu 서은도 목사 dẫn. Dữ kiện đời thực: channels/eundo-malsseum_shin-seongjong_sources.md. KHÔNG dùng cốt 'góa vợ / 정희 / Kinh Thánh của vợ' nữa (vợ thật còn sống theo nguồn 2011).",
+  "previous_promise_fulfilled": "Đã trả lời câu hỏi 'người đi trước đang làm gì' bằng 계 14:13 và 빌 1:23 (đúng hai câu hứa). KHÔNG thực hiện phần 'mở trang chưa đọc trong Kinh Thánh của vợ' — đã bỏ do đổi người dẫn (lời hứa tập 4 bị hủy có chủ ý; cần chủ dự án xác nhận). Tập 5 cũng hứa 'đọc 1 dòng bình luận' (lặp từ tập 3-4).",
+  "characters_used": [
+    "신성종 목사 - người dẫn (người có thật; chỉ dùng dữ kiện có nguồn)",
+    "한 권사님 - hư cấu, chồng mất, hỏi 'chồng tôi đang làm gì' (xuyên suốt)",
+    "한 집사님 - hư cấu, bán rau ở chợ, ước nguyện cuối 'ngồi nghỉ' (cao trào)",
+    "한 청년 - hư cấu, cãi vã cuối với cha vừa mất",
+    "장모님 - có nguồn, chỉ ở mức: hỏi thiên đàng có thật không (2008)"
+  ],
+  "fixed_facts": [
+    "Dữ kiện có nguồn: câu hỏi của mẹ vợ (đầu 2008), nhịn 1 bữa/ngày cầu nguyện, 8 ngày thấy khải tượng, 'thấy' không phải 'đã đến', hàng trước là tử đạo → truyền giáo, tiếng nói về vinh quang bản thân, sau tuổi 70 cùng vợ đi Campuchia/Ấn Độ",
+    "Nguồn: 국민일보 2011-09-30; 데일리굿뉴스 2011-10-19; 리폼드뉴스 2017-03-29 (xem file sources)",
+    "Câu đóng đinh lặp 3 lần: 주 안에서 먼저 간 이들은 사라진 것이 아니라, 주님 곁에서 쉬고 있습니다.",
+    "Bài tập: đọc 계 14:13 thành tiếng + gửi lời hỏi thăm người họ yêu mến; hứa đọc 1 dòng bình luận",
+    "Giáo lý cân bằng: trạng thái trung gian — nhiều quan điểm; 'tôi không biết' ở 3 câu hỏi (히 12:1, 계 7:15, 벧후 3:8)"
+  ],
+  "promise_for_next_episode": "다음 시간에는 후회로 잠 못 드는 밤에 대해 말씀드리겠습니다. 예수님을 세 번 모른다고 한 베드로에게, 부활하신 주님이 새벽 바닷가에서 먼저 하신 일이 무엇이었는지, 요한복음 이십일 장과 요한일서 일 장 구 절을 함께 읽겠습니다.",
+  "vignettes_used": [
+    "장모님의 질문 + 여드레 금식 기도 (hook, có nguồn)",
+    "한 권사님: '우리 영감은 지금 뭘 하고 있을까요' (+ nhiều năm sau: 어디 계신지만 알면 돼요)",
+    "눅 23:43 오늘 낙원 (강도)",
+    "빌 1:21-24 떠남 = 출항",
+    "히 12:1 / 계 7:15 / 벧후 3:8: 3 điều Kinh Thánh không nói rõ",
+    "마 17: 변화산 모세·엘리야를 알아봄",
+    "8 ngày thấy thiên đàng (chứng ngôn có nguồn) + 행 17:11 kiểm chứng bằng Kinh Thánh",
+    "마 19:30 먼저 된 자·나중 된 자",
+    "한 집사님: 장터 채소 장수, '이제는 앉아서 좀 쉬고 싶구나' (cao trào)",
+    "요 11:35, 살전 4:13, 요 14:1-3",
+    "한 청년: 아버지와의 마지막 말다툼 + 계 21:4"
+  ],
+  "motif_variant": "서재의 등불 — chỉ nhắc 1 lần ở cuối ('등불은 같은 자리에서 타고 있다'); thumbnail đề xuất: ghế bành trống bên đèn, KHÔNG vẽ mặt người thật",
+  "core_sentence": "주 안에서 먼저 간 이들은 사라진 것이 아니라, 주님 곁에서 쉬고 있습니다.",
+  "thumbnail": {
+    "subject": "Ảnh cắt nền (nobg) do chủ dự án cung cấp, giữ nguyên tư thế/biểu cảm (cười, áo vest xanh, cà vạt đỏ), chỉ đổi tỷ lệ/vị trí; nền ánh sáng thiên đàng (trời xanh + tia sáng từ trên) dựng bằng PIL, không dùng Higgsfield",
+    "character_id": "",
+    "variant": "C",
+    "first_line_keyword": "먼저",
+    "bg_variation": {
+      "time": "ánh sáng vàng-tím xuyên cửa kính màu, sương mỏng, vẫn sáng",
+      "season": "n/a",
+      "object": "nội thất nhà thờ làm mờ (hàng ghế, nến, cửa sổ kính màu)",
+      "expression": "giữ nguyên ảnh gốc (cười)",
+      "shot_size": "trung cảnh, người bên phải"
+    },
+    "lines": [
+      "먼저 떠난 이들은",
+      "3가지",
+      "무엇을 할까요?",
+      "(caption) 신성종 목사"
+    ],
+    "status": "render lại 2026-10-09: nền nhà thờ huyền bí thật (Higgsfield) + ảnh nhân vật cắt nền giữ nguyên; overlay_alpha 70; ảnh gốc nền ở thumb_tests/scene_church.png",
+    "source_image": "characters/eundo-malsseum/seo-eundo_v1/looks/eb3011c3a8c0c_nobg.png",
+    "subject_ref_job_id": "869e8d3b-d7f8-4851-86d0-f0b38900b049 (nền cảnh nhà thờ, Higgsfield gpt_image_2_5, không có người)"
+  },
+  "upload": {
+    "planned_at": "2026-10-13 05:30 KST (= 03:30 giờ VN)",
+    "slot_rule": "TUE 05:30 — slot kế tiếp sau SAT 2026-10-10 (tập 4)"
+  }
+}

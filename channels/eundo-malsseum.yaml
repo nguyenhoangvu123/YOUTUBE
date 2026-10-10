@@ -4,21 +4,20 @@ handle: "@은도목사"                      # TODO: kiểm tra handle còn tr�
 language: ko
 niche: "기독교 설교 / 노년의 신앙 / 천국·부활·사별 위로"
 
-# Nhân vật dẫn kênh — HOÀN TOÀN HƯ CẤU. Không dựa trên, không ám chỉ bất kỳ mục sư có thật nào
-# (đặc biệt KHÔNG mô phỏng 신성종 목사 của kênh đối thủ: không dùng tên, tiểu sử, hội thánh, giọng thật).
+# Nhân vật dẫn kênh — từ 2026-10-09 chủ dự án cho phép dùng tên người có thật (신성종 목사).
+# Vẫn không bịa tiểu sử/lời trích như sự thật; phần sáng tác phải có dòng công bố (xem CLAUDE.md mục 1).
 persona:
-  name: "서은도 목사"
-  display_prefix: "[은도 목사]"
+  name: "신성종 목사"                       # từ tập 5 (2026-10-09) thay 서은도 목사 (tập 1-4 giữ nguyên)
+  display_prefix: "[신성종 목사]"
   bio_fictional: >-
-    78세. 강원도 산골 작은 교회에서 40년 목회 후 은퇴.
-    10년 전 아내(가명 '정희')와 사별. 자녀 2명은 도시에 삶.
-    지금은 시골집 서재에서 매일 새벽 말씀을 묵상하며 성도들의 편지에 답한다.
+    Người dẫn chuyện/nhân vật là 신성종 목사 (người có thật). KHÔNG tự thêm tuổi, quê quán,
+    hội thánh, gia đình, hay trải nghiệm cá nhân nếu không có nguồn trong 01_ideas.md.
+    Lời kể, tình huống, hội thoại trong video là sáng tác và phải có dòng công bố.
   voice: "할아버지가 손주에게 들려주듯 따뜻하고 느린 합쇼체. 꾸짖지 않고 위로한다."
   signature_opening: "사랑하는 여러분, 오늘도 이 작은 서재에 찾아와 주셔서 고맙습니다."
   signature_closing: "오늘도 주님 안에서 평안하십시오. 저는 내일 새벽에 또 기다리겠습니다."
   recurring_elements:
     - "서재 창밖의 오래된 감나무 (계절 따라 변화 — 영상 날짜와 계절 맞출 것)"
-    - "먼저 간 아내 정희의 낡은 성경책 (여백 메모를 가끔 인용)"
     - "목회 시절 성도 이야기 — 반드시 익명/가명 ('한 권사님', '박 집사님')"
 
 tone:
@@ -54,7 +53,7 @@ structure:                                # khung 1 bài giảng 30-40 phút
   - "목회 일화 1: 이 질문을 품었던 성도 이야기"
   - "본론 3~6개 포인트 — 포인트마다 [성경 구절 → 쉬운 풀이 → 삶의 적용]"
   - "35~45% 지점: soft CTA"
-  - "목회 일화 2 또는 아내 정희의 성경 메모 — 감정 절정"
+  - "목회 일화 2 (창작·익명) — 감정 절정"
   - "결론: 핵심 문장 반복 + 짧은 축복 기도문"
   - "hard CTA: 다음 설교 주제 구체적 예고 + signature_closing"
 
@@ -65,10 +64,9 @@ motif:
     - "빛만 단독으로 쓰는 구도 (경쟁 채널과 중복)"
 
 characters:
-  policy: "실존 인물 이름 사용 금지. 가상 인물 + 흔한 이름만 사용."
+  policy: "실존 인물 이름 사용 허용 (신성종 목사, 2026-10-09 결정). 단, 허위 경력·인용을 사실처럼 쓰지 말 것; 창작 부분은 공지문으로 명시. 그 외 인물은 가상/익명."
   reused_pool:
-    - "서은도 목사 (진행자, 78세)"
-    - "아내 정희 (사별, 성경 메모로만 등장)"
+    - "신성종 목사 (진행자, từ tập 5)"
 
 color_palette:                             # tên khóa = VAI TRÒ mà tools/*.py yêu cầu, không phải tên màu
   navy: "#2B1D14"                         # vai trò nền tối → thực tế: nâu gỗ sẫm (deep brown)
@@ -79,7 +77,7 @@ thumbnail_bg:
   model: "gpt_image_2_5"
   aspect_ratio: "16:9"
   palette_param: ""
-  reference_role: "image_references"      # dùng 1 ảnh gương mặt cố định của 서은도 목사 cho mọi tập
+  reference_role: "image_references"      # dùng 1 ảnh gương mặt cố định của 신성종 목사 cho mọi tập (từ tập 5; cần ảnh/nhân vật mới, xem Bước 7 tao-video)
   params:
     quality: "high"
     resolution: "2k"
@@ -148,7 +146,7 @@ thumbnail_text_style:
     caption: { color: "#FFFFFF", scale: 0.36, stroke: "#000000", stroke_ratio: 0.10 }
     hero_xl: { gradient: ["#FFE259", "#FFA751"], scale: 1.6, stroke: "#000000", stroke_ratio: 0.07 }
   line_rules:
-    - "TỐI ĐA 3 dòng tính cả caption; mỗi dòng ≤ 7 ký tự nếu được. Caption chỉ còn '은도 목사' hoặc bỏ — caption dài không đọc được trên điện thoại"
+    - "TỐI ĐA 3 dòng tính cả caption; mỗi dòng ≤ 7 ký tự nếu được. Caption chỉ còn '신성종 목사' hoặc bỏ — caption dài không đọc được trên điện thoại"
     - "Dòng to nhất (hero) = phần CỤ THỂ + CẢM XÚC nhất của tiêu đề (con người, bí mật, nỗi sợ, mất mát); khái niệm trừu tượng (은혜, 말씀...) và con số chỉ làm dòng phụ — trừ khi con số chính là móc"
     - "Thumb BỔ SUNG cho tiêu đề, không chép nguyên vế 2 của tiêu đề"
     - "Mọi chữ phải lấy từ tiêu đề ⭐, không thêm nội dung mới"
@@ -195,7 +193,7 @@ title_formulas:                           # 25-45 ký tự (CLAUDE.md mục 5). 
     - "Không dùng đuôi '| 태그 | 태그' → tag để ở hashtag mô tả"
     - "display_prefix chỉ dùng trên thumbnail caption, không trong tiêu đề (kênh mới, tên chưa có sức kéo)"
   avoid:
-    - "실존 목사 이름·호칭을 제목/태그/설명에 사용"
+    - "제목에 '설교/말하는' 등 신성종 목사 본인이 발언·제작한 것처럼 보이는 표현 (이름 자체는 2026-10-09부터 허용; 증언·여드레·체험 등 출처 있는 사실과 함께 사용)"
     - "'반드시', '100%', '이것만 하면 치유' 등 과장·의학적 약속"
     - "영어 제목 (경쟁 채널 데이터상 한국어 대비 조회수 크게 낮음)"
 
@@ -210,9 +208,10 @@ cta:
 
 description_template:
   disclosure_line: >
-    ※ 본 채널의 서은도 목사는 실존 인물이 아닌 가상의 인물이며, 설교 속 일화와
-    인물은 신앙적 메시지 전달을 위해 창작되었습니다. 인용된 성경 구절은 개역개정
-    성경을 따랐습니다. 특정 실존 목회자와 관련이 없습니다.
+    ※ 본 영상의 설교 속 일화와 대화는 신앙적 메시지 전달을 위해 창작·각색된
+    내용이며, 실제 있었던 사실이나 특정 인물의 실제 발언이 아닙니다. 이 영상은
+    AI 음성과 창작 대본으로 만들어졌으며, 신성종 목사 본인이 제작·감수·출연하거나
+    보증한 것이 아닙니다. 인용된 성경 구절은 개역개정 성경을 따랐습니다.
   disclosure_position: "hashtag 앞, 절대 마지막 줄에 숨기지 않음"
   no_timestamps: true                     # KHÔNG thêm mục lục thời gian (목차 00:00...) vào mô tả
 
@@ -265,4 +264,4 @@ keywords_default:
   - 위로
   - 기도
   - 성경
-  - 은도목사
+  - 신성종목사
