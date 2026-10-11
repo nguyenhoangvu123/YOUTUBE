@@ -1,0 +1,58 @@
+{
+  "channel_id": "eundo-malsseum",
+  "episode_date": "2026-10-11",
+  "episode_title": "[신성종 목사] 꿈에 나타난 돌아가신 가족~성경이 먼저 하는 말은 무엇일까",
+  "series_label": "아홉 번째 말씀",
+  "previous_promise_fulfilled": "Đúng lời hứa cuối tập 8: '꿈에 나타난 돌아가신 가족이 무슨 의미인지 … 신명기 18:10-11, 전도서 5:7'. Đã dùng 신 18:10-11 và 전 5 (diễn giải). Lời hứa tập 5 (후회/베드로) vẫn chưa thực hiện.",
+  "characters_used": [
+    "신성종 목사 - người dẫn (không dùng dữ kiện đời thực)",
+    "한 아주머니 - hư cấu, mơ mẹ ngồi bên bàn ăn, hàng xóm khuyên cúng 굿 (khung mở/đóng)",
+    "한 어르신 - hư cấu, mơ cha vẫy tay, nói 'cảm ơn' trên ban công",
+    "한 집사님 - hư cấu, mơ chồng cười, buổi sáng cầu nguyện",
+    "한 할아버지 - hư cấu, sợ ngủ vì mơ vợ"
+  ],
+  "promise_for_next_episode": "다음 시간에는 죽은 자를 위해 기도해도 되는지에 대해 말씀드리겠습니다. 성경이 분명히 말하는 것과 말하지 않는 것, 그리고 먼저 간 이를 그리워하는 마음을 하나님께 어떻게 올려 드릴 수 있는지를 히브리서 구 장 이십칠 절과 시편 육십이 편 팔 절의 말씀으로 함께 살펴보겠습니다.",
+  "vignettes_used": [
+    "한 아주머니: 어머니가 밥상 앞에서 말없이 사라짐, 이웃이 굿을 권함",
+    "밤의 면회 (khái niệm)",
+    "마 1:20 무서워하지 말라 (đáp án vòng mở)",
+    "창 28 야곱의 꿈, 창 40:8 해석은 하나님께",
+    "욜 2:28 늙은이는 꿈을 꾸며",
+    "눅 16 부자와 나사로 (여러 견해)",
+    "시 56:8 눈물을 병에",
+    "한 어르신: 아버지 꿈, 베란다에서 고맙다고 말함",
+    "삼상 28:6 사울과 신접한 여인, 대상 10:13-14",
+    "요 14:27 평안을 끼치노니",
+    "한 집사님: 남편이 웃는 꿈",
+    "한 할아버지: 꿈이 두려워 잠을 피함",
+    "계 21:4 눈물을 닦아 주심"
+  ],
+  "motif_variant": "서재의 등불 — chỉ nhắc 1 lần ở cuối. Không dùng 문.",
+  "core_sentence": "꿈에서 만난 그 얼굴은 두려워할 일이 아니라, 맡길 일입니다.",
+  "hook_style": "Câu hỏi ngay vào trải nghiệm riêng tư (mơ thấy người đã mất) → vòng mở 'câu đầu tiên của Kinh Thánh'. Tập 10 nên đổi kiểu mở (vd. một câu nói nguyên văn hoặc con số).",
+  "thumbnail": {
+    "subject": "Ảnh thật cắt nền (eb3011c3a8c0c_nobg.png); nền công thức duyệt vàng-đen",
+    "subject_ref_job_id": "288ee68b-d896-480c-826c-8a5e651b381d (nền hoàng hôn sương vàng + thánh giá + bokeh; bản còn lại 1d77184e-bfb7-49e6-9e92-b7d43d1db865)",
+    "character_id": "",
+    "variant": "A",
+    "first_line_keyword": "꿈에",
+    "bg_variation": {
+      "time": "hoàng hôn/bình minh vàng",
+      "season": "n/a",
+      "object": "thánh giá + ánh sáng",
+      "expression": "giữ nguyên ảnh gốc (cười)",
+      "shot_size": "cận mặt + vai"
+    },
+    "lines": [
+      "꿈에 나타난",
+      "돌아가신 가족",
+      "먼저 하는 말은?",
+      "(caption) 신성종 목사"
+    ],
+    "status": "đã dựng thumb_bg.png + thumb_final.png (2026-10-11) theo công thức đã duyệt | 2026-10-11: đổi chữ thumb/tiêu đề để bỏ số 5 trùng lặp"
+  },
+  "upload": {
+    "planned_at": "2026-10-22 05:30 KST (= 03:30 giờ VN)",
+    "slot_rule": "THU 05:30 — slot kế tiếp sau TUE 2026-10-20 (tập 8)"
+  }
+}

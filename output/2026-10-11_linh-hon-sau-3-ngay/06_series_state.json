@@ -1,0 +1,53 @@
+{
+  "channel_id": "eundo-malsseum",
+  "episode_date": "2026-10-11",
+  "episode_title": "[신성종 목사] 숨을 거둔 직후 영혼은 어디로 갈까~성경이 밝히는 사흘의 비밀",
+  "series_label": "여덟 번째 말씀",
+  "previous_promise_fulfilled": "Lời hứa cuối tập 7 (친구) đã được CHỈNH sang chủ đề này (xem hard CTA của tập 7). Bản 시편 23편 (output/2026-10-11_thi-thien-23-tuoi-nay) bị chủ dự án bỏ vì lệch hướng. Lời hứa tập 5 (후회/베드로) vẫn chưa thực hiện.",
+  "characters_used": [
+    "신성종 목사 - người dẫn (không dùng dữ kiện đời thực)",
+    "한 어머니 - hư cấu, con trai rời đạo và mất đột ngột",
+    "한 어르신 - hư cấu, bệnh giường, gọi từng người nói lời cuối"
+  ],
+  "promise_for_next_episode": "다음 시간에는 꿈에 나타난 돌아가신 가족이 무슨 의미인지 말씀드리겠습니다. 성경이 꿈을 어떻게 다루는지, 그리고 죽은 자에게 묻고 싶어지는 마음을 신명기 십팔 장 십 절과 십일 절, 전도서 오 장 칠 절의 말씀으로 함께 살펴보겠습니다.",
+  "vignettes_used": [
+    "병실 심전도 (hook)",
+    "눅 23:46 / 시 31:5 영혼을 아버지 손에 부탁",
+    "사흘의 침묵: 행 2:31, 음부 (여러 견해), 벧전 3:19",
+    "눅 16 거지 나사로 (비유 해석 여러 견해)",
+    "토요일: 제자들이 숨어 지냄",
+    "마 10:28, 전 12:7, 창 2:7, 히 9:27: 몸과 영혼, 한 번의 죽음",
+    "지옥: 게헨나 이름, 가볍게/무겁게 두 위험, 요 3:16-17, 벧후 3:9",
+    "한 어머니: 믿지 않고 떠난 아들, 창 18:25",
+    "요 20 마리아야, 도마와 못 자국, 고전 15:42-44, 55",
+    "한 어르신: 병상에서 가족에게 고맙다/미안하다/자랑스럽다"
+  ],
+  "motif_variant": "서재의 등불 — chỉ nhắc 1 lần ở cuối. Không dùng 문.",
+  "core_sentence": "죽음은 끝이 아니라, 사흘의 침묵 뒤에 오는 아침의 시작입니다.",
+  "hook_style": "Cảnh phòng bệnh cinematic → câu hỏi lớn → manh mối lạ (3 ngày của Chúa). Tập 9 nên đổi kiểu mở.",
+  "thumbnail": {
+    "subject": "Ảnh thật cắt nền (eb3011c3a8c0c_nobg.png); nền công thức duyệt, vàng-đen",
+    "subject_ref_job_id": "2a35dda7-44dd-42d1-b723-87a5a1b825d5 (nền bình minh vàng qua mây bão + thánh giá; bản còn lại 670cee8c-6719-4e8c-a028-8adeaac830bd)",
+    "character_id": "",
+    "variant": "A",
+    "first_line_keyword": "숨을",
+    "bg_variation": {
+      "time": "bình minh/hoàng hôn vàng",
+      "season": "n/a",
+      "object": "thánh giá trên đồi + tia sáng",
+      "expression": "giữ nguyên ảnh gốc (cười)",
+      "shot_size": "cận mặt + vai"
+    },
+    "lines": [
+      "숨을 거둔 직후",
+      "영혼은 어디로?",
+      "사흘의 비밀",
+      "(caption) 신성종 목사"
+    ],
+    "status": "đã dựng thumb_bg.png + thumb_final.png (2026-10-11) theo công thức đã duyệt | 2026-10-11: đổi chữ thumb/tiêu đề để bỏ số 5 trùng lặp"
+  },
+  "upload": {
+    "planned_at": "2026-10-20 05:30 KST (= 03:30 giờ VN)",
+    "slot_rule": "TUE 05:30 — slot kế tiếp sau SAT 2026-10-17 (tập 7 친구)"
+  }
+}

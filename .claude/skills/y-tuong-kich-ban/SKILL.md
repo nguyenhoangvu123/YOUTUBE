@@ -46,6 +46,12 @@ thủ quy trình bên dưới y hệt như gọi đúng cú pháp.
    hứa đó để làm chủ đề mới [Y] không, hay ưu tiên giữ đúng lời hứa?"
    rồi chờ người dùng trả lời trước khi đi tiếp.
 
+6. **Nếu có `channels/<channel_id>_script_playbook.md` (eundo-malsseum, từ 2026-10-11): đọc và theo đó** —
+   chủ đề lấy từ "Ngân hàng chủ đề kế tiếp" (trục tâm linh cõi chết/hậu sinh, xen đề tài "cho phép" ≤ 1/3),
+   hook theo công thức 4-5 câu ≤ 80 어절 có vòng mở, nhân vật = người hư cấu ẩn danh (không dùng dữ kiện đời thực của
+   신성종 목사), không bình giải Kinh Thánh sâu. Ưu tiên lời hứa chưa thực hiện ở cuối tập gần nhất; nếu chủ đề lấy từ
+   ngân hàng chủ đề, ghi rõ lượt xem đối thủ làm cơ sở và gợi ý vế 2 tiêu đề KHÁC tiêu đề đối thủ.
+
 ## Bước 2 — Sinh 3 phương án ý tưởng (không phải 1, không phải 5+)
 
 Mỗi phương án PHẢI có đủ các trường sau, viết ngắn gọn (mỗi phương án

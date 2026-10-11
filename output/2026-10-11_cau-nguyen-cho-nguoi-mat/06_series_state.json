@@ -1,0 +1,59 @@
+{
+  "channel_id": "eundo-malsseum",
+  "episode_date": "2026-10-11",
+  "episode_title": "[신성종 목사] 죽은 자를 위해 기도해도 될까요~성경이 말하는 3가지 대답",
+  "series_label": "열 번째 말씀",
+  "previous_promise_fulfilled": "Đúng lời hứa cuối tập 9: '죽은 자를 위해 기도해도 되는지 … 히브리서 9:27, 시편 62:8'. Lời hứa tập 5 (후회/베드로) vẫn chưa thực hiện.",
+  "characters_used": [
+    "신성종 목사 - người dẫn (không dùng dữ kiện đời thực)",
+    "한 아들 - hư cấu, hỏi 'cầu nguyện cho cha đã mất được không' (hook, khung mở/đóng)",
+    "한 딸 - hư cấu, không kịp nhìn mẹ lúc lâm chung",
+    "한 권사님 - hư cấu, ngừng cầu nguyện cho mẹ sau lời của người khác",
+    "형제 - hư cấu, cãi nhau về cúng/cầu nguyện ngày giỗ",
+    "한 할머니 - hư cấu, gọi tên chồng lúc hoàng hôn"
+  ],
+  "promise_for_next_episode": "다음 시간에는 반려동물이 죽으면 어떻게 되는지에 대해 말씀드리겠습니다. 성경이 동물에 대해 분명히 말하는 것과 말하지 않는 것, 그리고 함께 살던 작은 생명을 떠나보낸 마음을 창세기 일 장과 시편 삼십육 편 육 절의 말씀으로 함께 살펴보겠습니다.",
+  "vignettes_used": [
+    "한 아들: 아버지 장례 뒤 질문",
+    "보내지 못한 편지 (khái niệm)",
+    "한 딸: 임종을 지키지 못한 죄책감",
+    "히 9:27, 롬 14:9, 시 139:8, 마 22:32",
+    "엡 2:8-9 구원은 은혜",
+    "눅 16:26 큰 구렁 (여러 견해), 마카베오하 12 (가톨릭·정교회)",
+    "한 권사님: 어머니를 위한 기도를 멈춤",
+    "제사/추도예배 문제 (균형)",
+    "형제 다툼과 화해",
+    "시 62:8, 애 2:19 마음을 쏟아라",
+    "빌 1:3 감사, 눅 23:46 맡김, 고백, 롬 8:26",
+    "한 할머니: 해 질 무렵 남편 이름"
+  ],
+  "motif_variant": "서재의 등불 — chỉ nhắc 1 lần ở cuối. Không dùng 문.",
+  "core_sentence": "그리움은 하나님께 올려도 되는 기도입니다.",
+  "hook_style": "Câu hỏi nguyên văn của một người ('목사님, …기도해도 됩니까') + vòng mở 'một câu không cho phép cũng không cấm'. Tập 11 nên đổi kiểu mở (vd. con số, hoặc một hình ảnh nhỏ).",
+  "number_rotation": "Tập 7 = 5가지, tập 8/9 không số, tập 10 = 3가지 → tập 11 nên không số hoặc 4/6/7.",
+  "thumbnail": {
+    "subject": "Ảnh thật cắt nền (eb3011c3a8c0c_nobg.png); nền công thức duyệt vàng-đen",
+    "subject_ref_job_id": "0dc1b374-09b0-4eb0-8a61-4eaff724d98a (nền hoàng hôn cánh đồng + thánh giá; bản còn lại e2d0b97a-9845-424b-adbb-cc39e95f3232)",
+    "character_id": "",
+    "variant": "A",
+    "first_line_keyword": "죽은",
+    "bg_variation": {
+      "time": "bình minh/hoàng hôn vàng",
+      "season": "n/a",
+      "object": "thánh giá + ánh sáng",
+      "expression": "giữ nguyên ảnh gốc (cười)",
+      "shot_size": "cận mặt + vai"
+    },
+    "lines": [
+      "죽은 자를 위해",
+      "기도해도 될까요?",
+      "3가지 대답",
+      "(caption) 신성종 목사"
+    ],
+    "status": "đã dựng thumb_bg.png + thumb_final.png (2026-10-11) theo công thức đã duyệt"
+  },
+  "upload": {
+    "planned_at": "2026-10-24 05:30 KST (= 03:30 giờ VN)",
+    "slot_rule": "SAT 05:30 — slot kế tiếp sau THU 2026-10-22 (tập 9)"
+  }
+}

@@ -47,15 +47,18 @@ content_rules:
   anecdotes: "목회 일화는 창작임을 전제로, 실존 인물·교회·지명 특정 금지."
   medical_financial: "건강·재정 효과 약속 금지 (기도하면 병이 낫는다 등 단정 금지)."
 
-structure:                                # khung 1 bài giảng 30-40 phút
-  - "0:00 훅: 시청자의 질문을 그대로 읽음 + 결론 예고 1문장 (3문장 이내)"
-  - "짧은 인사 (signature_opening, 2문장 이내)"
-  - "목회 일화 1: 이 질문을 품었던 성도 이야기"
-  - "본론 3~6개 포인트 — 포인트마다 [성경 구절 → 쉬운 풀이 → 삶의 적용]"
-  - "35~45% 지점: soft CTA"
-  - "목회 일화 2 (창작·익명) — 감정 절정"
-  - "결론: 핵심 문장 반복 + 짧은 축복 기도문"
-  - "hard CTA: 다음 설교 주제 구체적 예고 + signature_closing"
+script_playbook: "channels/eundo-malsseum_script_playbook.md"   # cách làm kịch bản đã duyệt 2026-10-11 — tao-video/y-tuong-kich-ban phải đọc
+
+structure:                                # khung đã duyệt 2026-10-11 (chi tiết: playbook mục 3)
+  - "0:00 훅 4-5문장 ≤80어절: 시청자가 바로 떠올릴 장면 → 큰 질문/역설 → 근거 있는 단서 → 열린 고리 (5분 안에 1차 해답)"
+  - "짧은 인사 (signature_opening) + 이번 회 소개 1문장 (합쳐서 2문장 이내)"
+  - "구체적인 장면 1~2분 → 공통 감정에 이름 붙이기 → 문제 재정의('당신의 잘못이 아닙니다') → 이번 회 핵심 개념에 이름 붙이기 → N가지 예고"
+  - "본론 5개 포인트 ('첫 번째…') — 포인트마다 [원칙 → 이야기/이미지 → 짧은 성경 → 작은 행동], 성경 20~30%"
+  - "핵심 문장 4회 반복 (포인트2 뒤·중간·결론 직전·마지막) + '여기서 잠깐 멈추겠습니다'"
+  - "35~45% 지점: soft CTA (3문장 이내)"
+  - "창작·익명 일화 (감정 절정)"
+  - "정리 → 한 주만 붙들기(N가지 중 1) → 행동 한 가지씩 → 안전 문구(의사·상담·109) → 3줄 기도 → 서재 등불 1회 → 긴 기도"
+  - "hard CTA: 다음 설교 주제·성경 구절 구체적 예고 + signature_closing"
 
 motif:
   core_symbol: "서재의 등불 (lamp)"
@@ -125,10 +128,40 @@ character:
 
 thumbnail_layout:
   text_side: "left"
-  text_width_pct: 56                      # chữ chiếm ~55-60% ngang như các thumb viral cùng ngách
+  text_width_pct: 61                      # chữ + nhân vật cùng chiếm gần hết khung
+  margin_x: 44
+  text_offset_y_pct: 0
+  text_fill_height_pct: 0                 # 0 = khe dòng tự nhiên (sát nhau như thumb đối thủ); >0 để kéo giãn khối chữ
   main_max_px: 150
   sub_max_px: 64
-  overlay_alpha: 245                      # nền trái gần đen → chữ màu nổi tối đa
+  overlay_alpha: 0                        # nền tự dựng (backdrop) đã tối bên trái → không cần overlay
+  fit_width: true                         # mỗi dòng co/giãn cho rộng đúng text_width_pct → khối chữ hình chữ nhật
+  caption_center: true                    # tên tác giả canh giữa dưới khối chữ
+  backdrop:                               # nền tự dựng: đen-nâu nhẹ bên trái → quầng vàng sau nhân vật, tia sáng, thánh giá mờ
+    base: "#0B0907"
+    glow: "#D9A02A"
+    glow_x_pct: 86
+    glow_y_pct: 40
+    glow_radius_pct: 58
+    rays: 7
+    ray_alpha: 0.10
+    cross: true
+    cross_color: "#3D2509"
+    cross_alpha: 0.6
+    cross_x_pct: 66
+    cross_y_pct: 14
+    cross_h_pct: 58
+    vignette: 0.30
+  subject:                                # ảnh thật đã cắt nền, chủ dự án cung cấp 2026-10-11. Tâm mặt/đỉnh tóc đo trên ảnh gốc 800x1200
+    image: "characters/eundo-malsseum/seo-eundo_v1/looks/eb3011c3a8c0c_nobg.png"
+    scale: 1.22                           # nhân vật lớn, vẫn thấy hai vai
+    face_x_src: 435
+    face_x_pct: 73
+    head_top_src: 314
+    head_top_pct: 3
+    glow: "#FFE2A0"
+    glow_radius: 16
+    glow_alpha: 0.35
 
 # Kiểu chữ thumbnail (render_thumb.py chế độ "lines"). Rút ra từ 16 thumb top view
 # (từ khóa 천국 가족 / 목사 설교 / 노년의 신앙, khảo sát 2026-09-25):
@@ -137,21 +170,22 @@ thumbnail_layout:
 #     → dòng chốt to nhất màu gradient vàng-cam; dòng caption trắng nhỏ
 #   - mint/cyan là màu bổ túc của nền nâu-hổ phách → tương phản mạnh nhất
 thumbnail_text_style:
-  font: "BlackHanSans-Regular.ttf"
+  font: "NotoSansKR-Black.ttf"            # 2026-10-11: đổi từ BlackHanSans cho giống chữ thumb đối thủ (gothic đậm, nét đều)
   styles:
-    top:     { color: "#7DF9E9", scale: 0.92, stroke: "#000000", stroke_ratio: 0.08 }
-    box:     { color: "#FFFFFF", box: "#E0141E", scale: 0.92, stroke: "#000000", stroke_ratio: 0.05, box_pad: 0.12 }
-    hero:    { gradient: ["#FFE259", "#FFA751"], scale: 1.15, stroke: "#000000", stroke_ratio: 0.08 }
+    top:     { color: "#BDFCFC", scale: 0.92, stroke: "#000000", stroke_ratio: 0.085 }   # xanh băng nhạt — ĐO từ thumb đối thủ (Screenshot 114111): RGB ~(189,252,252)
+    box:     { color: "#FFFFFF", box: "#F60000", scale: 0.92, stroke: "#000000", stroke_ratio: 0.06, box_pad: 0.12 }
+    hero:    { gradient: ["#FBD844", "#FAB83D"], scale: 1.15, stroke: "#000000", stroke_ratio: 0.09 }   # vàng hổ phách, đo từ đối thủ: ~(251,216,68) → (250,184,61)
     white:   { color: "#FFFFFF", scale: 0.92, stroke: "#000000", stroke_ratio: 0.08 }
-    caption: { color: "#FFFFFF", scale: 0.36, stroke: "#000000", stroke_ratio: 0.10 }
-    hero_xl: { gradient: ["#FFE259", "#FFA751"], scale: 1.6, stroke: "#000000", stroke_ratio: 0.07 }
+    caption: { color: "#F8F8F8", scale: 0.36, stroke: "#000000", stroke_ratio: 0.10 }
+    hero_xl: { gradient: ["#FBD844", "#FAB83D"], scale: 1.6, stroke: "#000000", stroke_ratio: 0.07 }
   line_rules:
-    - "TỐI ĐA 3 dòng tính cả caption; mỗi dòng ≤ 7 ký tự nếu được. Caption chỉ còn '신성종 목사' hoặc bỏ — caption dài không đọc được trên điện thoại"
+    - "Từ 2026-10-11 khung cố định như 2 thumb top của đối thủ: dòng 1 xanh cyan (bối cảnh/điều kiện) → dòng 2 trắng trên hộp đỏ (lõi cảm xúc/câu hỏi) → dòng 3 vàng to nhất (lời hứa: N가지 방법 / 성경이 말하는 진실...). layout.fit_width=true tự co chữ cho 3 dòng cùng bề rộng"
+    - "TỐI ĐA 3 dòng + caption; mỗi dòng 5-9 ký tự (kể cả khoảng trắng) — dài hơn 9 thì chữ quá nhỏ trên điện thoại. Caption chỉ '신성종 목사' hoặc bỏ"
     - "Dòng to nhất (hero) = phần CỤ THỂ + CẢM XÚC nhất của tiêu đề (con người, bí mật, nỗi sợ, mất mát); khái niệm trừu tượng (은혜, 말씀...) và con số chỉ làm dòng phụ — trừ khi con số chính là móc"
     - "Thumb BỔ SUNG cho tiêu đề, không chép nguyên vế 2 của tiêu đề"
     - "Mọi chữ phải lấy từ tiêu đề ⭐, không thêm nội dung mới"
     - "Chọn 1 trong layout_variants theo công thức của tiêu đề ⭐"
-    - "KHÔNG dùng cùng variant với video liền trước (xem thumbnail.variant trong 06_series_state.json cũ); nếu tiêu đề chỉ hợp đúng variant đó → đổi thứ tự/đổi tiêu đề ⭐ sang phương án khác"
+    - "Các variant giờ chỉ khác VAI TRÒ nội dung từng dòng (không đổi thứ tự) → không cần tránh variant liền trước; vẫn tránh lặp từ khóa dòng đầu"
     - "Không để 2 video liền nhau có dòng đầu tiên mở bằng cùng 1 từ khóa (vd 2 lần liền '천국...')"
   layout_variants:                        # giữ cố định font/viền/bảng màu, chỉ đổi cách xếp dòng
     A:
@@ -162,12 +196,12 @@ thumbnail_text_style:
     B:
       name: "Nghịch lý / hiểu lại"
       use_when: "Tiêu đề dạng 'X는 Y가 아닙니다', 'X의 진짜 의미' — công thức Hiểu lại"
-      pattern: ["box", "white", "hero"]         # dải đỏ lên đầu = câu phủ định gây sốc
+      pattern: ["top", "box", "hero"]           # 2026-10-11: đưa về khung chung; câu phủ định gây sốc nằm ở dòng box (đỏ)
       example: ["고난이 아닙니다", "자기 십자가의", "진짜 의미"]
     C:
       name: "Con số"
       use_when: "Tiêu đề có số N가지 / N단계 — công thức 'Bí mật N가지'"
-      pattern: ["top", "hero_xl", "box"]        # số rất to ở giữa
+      pattern: ["top", "box", "hero"]           # 2026-10-11: khung chung; con số nằm ở dòng hero (vàng), vd "세 가지 방법"
       example: ["하나님이 숨기라 하신", "5가지", "드러내면 사라진다"]
 
 fonts:

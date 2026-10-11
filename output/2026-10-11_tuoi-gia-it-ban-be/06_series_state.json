@@ -1,0 +1,54 @@
+{
+  "channel_id": "eundo-malsseum",
+  "episode_date": "2026-10-11",
+  "episode_title": "[신성종 목사] 친구 떠난 노년은 실패가 아닙니다~외로움이 평안이 되는 5가지",
+  "series_label": "일곱 번째 말씀 (nếu dùng THAY tập 6 '누워서 기도' thì đổi thành 여섯 번째 말씀 và sửa đoạn 3 của script + 04_description)",
+  "previous_promise_fulfilled": "Khớp lời hứa cuối kịch bản '누워서 기도' (tập 6): 친구가 하나둘 떠나는 나이, 전도서 4:9-12 — đã dùng đúng. Nếu tập 6 '누워서' không phát hành, lời hứa này vô hiệu và bản này vẫn dùng được độc lập (chỉ sửa 'tập trước' trong mô tả). Lời hứa tập 5 (후회/베드로, kịch bản ở dem-hoi-han-than-hong) chưa thực hiện — cần chủ dự án xác nhận. [2026-10-11: lời hứa tập sau đổi từ 시편 23편 sang '숨을 거둔 직후 영혼' theo hướng tâm linh của chủ dự án.]",
+  "characters_used": [
+    "신성종 목사 - người dẫn (không dùng dữ kiện đời thực nào)",
+    "한 할아버지 - hư cấu, băng ghế chung cư, 4 người bạn 40 năm (khung mở/đóng)",
+    "한 할머니 - hư cấu, nhóm chat gia đình",
+    "한 퇴직 교사 - hư cấu, chào hàng xóm mỗi ngày"
+  ],
+  "promise_for_next_episode": "다음 시간에는 숨을 거둔 직후 영혼은 어디로 가는지에 대해 말씀드리겠습니다. 예수님이 십자가에서 숨을 거두신 뒤 부활하시기까지 사흘 동안 어디에 계셨는지, 영혼과 지옥과 부활에 대해 성경이 분명히 말하는 것과 말하지 않는 것을 함께 살펴보겠습니다.",
+  "vignettes_used": [
+    "한 할아버지: 연락처에 남은 고인 번호, 벤치, '사십 년 동안 고마웠네'",
+    "마 26:56 제자들이 다 도망, 요 16:32",
+    "부활 후 평강을 빌어 주신 예수님 (요 20)",
+    "눅 5:16 한적한 곳에서 기도",
+    "텔레비전 소리와 외로움",
+    "한 할머니: 가족 단체방 아침 인사",
+    "한 퇴직 교사: 하루 한 사람에게 먼저 말 걸기",
+    "전 4:9-12 삼겹줄, 시 68:6",
+    "고인 번호를 지울까 말까 + 늦은 슬픔",
+    "요 15:15 친구라 하였노니, 출 33:11, 사 41:8/약 2:23"
+  ],
+  "motif_variant": "서재의 등불 — chỉ nhắc 1 lần ở cuối. Không dùng 문.",
+  "core_sentence": "혼자인 것과 버려진 것은 다릅니다.",
+  "hook_style": "Hành động ai cũng làm được (xem danh bạ) + phép đếm riêng tư → twist 'Chúa cũng không còn ai bên cạnh' → câu trả lời Ga 16:32. Khác tập 5, 6.",
+  "thumbnail": {
+    "subject": "Ảnh thật cắt nền do chủ dự án cung cấp (eb3011c3a8c0c_nobg.png); nền Higgsfield vàng-đen giống thumb đối thủ",
+    "subject_ref_job_id": "987b3ac0-5392-42d0-9c09-5abb46115716 (nền bình minh vàng trên núi + tia sáng, gpt_image_2_5; bản còn lại ea6aa155-7293-4425-a4e1-e08a50c6d0ee)",
+    "character_id": "",
+    "variant": "B",
+    "first_line_keyword": "친구",
+    "bg_variation": {
+      "time": "bình minh vàng, tia sáng chéo",
+      "season": "n/a",
+      "object": "núi sương + thánh giá (bị ảnh nhân vật che)",
+      "expression": "giữ nguyên ảnh gốc (cười)",
+      "shot_size": "cận mặt + vai, nâng cao"
+    },
+    "lines": [
+      "친구 떠난 노년은",
+      "실패가 아닙니다",
+      "평안 5가지",
+      "(caption) 신성종 목사"
+    ],
+    "status": "đã dựng thumb_bg.png + thumb_final.png (2026-10-11): nền bình minh vàng, chữ 64% khung dịch xuống, nhân vật nâng lên"
+  },
+  "upload": {
+    "planned_at": "2026-10-17 05:30 KST (= 03:30 giờ VN) nếu đăng sau tập 6 '누워서' (THU 10-15); nếu thay tập 6 thì 2026-10-15 05:30 KST",
+    "slot_rule": "SAT 05:30 — slot kế tiếp sau THU 2026-10-15"
+  }
+}

@@ -66,6 +66,36 @@ _(áp dụng luôn các lỗi chung trong mun-yeolda_learnings.md)_
 - Luân phiên cách mở: tập 3 = việc mục sư đã nói; tập 4 = hình ảnh đời thường (điện thoại không reo). Đừng để 2 tập liền cùng kiểu.
 - Cao trào tập 4 là hành động của nhân vật (gọi điện cho con), không phải ghi chú lề của vợ → tránh công thức "mở trang Kinh Thánh của vợ" lặp lại 4 tập liền.
 
+- Tập 6 (thử nghiệm, chưa có dữ liệu): hook = cảnh người xem tự nhận ra lúc 3 giờ sáng + twist hình ảnh cụ thể (than hồng) + 1 dòng riêng "숯불이었습니다." + câu hỏi "왜 하필?" + hứa 3 đáp án; 70 어절. Kiểu mở mỗi tập luân phiên: tập 5 chuyện đời mục sư → tập 6 gọi thẳng người xem → tập 7 đổi (vd. câu nói nguyên văn). So AVD tập 6 với tập 5 để kết luận.
+
+## Số liệu đối thủ (người dùng dán 2026-10-11, ~25 + ~50 video của 2 kênh dùng tên 신성종 목사)
+
+- Kéo view nhất (kênh 평안의 서재, video 1-2 tháng tuổi): 고전 15 원어 223K · 숨기라 하신 6가지 129K · 육체를 꺾고 112K · 천국 가족 74K · 시편 23편 65K · 친구 없이 노년 3가지 60K · 죽은 자들은 지금 63K · 분노·피로 46K · 사명 6가지 44K · 자기 십자가 38K · 누워서 기도해도 되나 31K.
+- Chủ đề "cho phép/trấn an" (누워서 기도, 기도하기 싫은 마음, 후회) và đời thường tuổi già (친구, 외로움) ổn định hơn chủ đề Kinh Thánh thuần (포도원, 계시록, 좁은 문: 4-6K).
+- Video 2 tuần gần đây của cả hai kênh chỉ 0,1-8K → thị trường đang bão hòa; tiêu đề tiếng Anh của kênh này có nhiều video 30-65K (lẫn yếu tố tuổi video, chưa kết luận).
+- Quy tắc mới (từ tập 6 viết lại): ~80% chuyện đời/việc làm được ngay, ~20% Kinh Thánh; mỗi tập 1 câu chuyện Kinh Thánh kể như truyện, không bình giải từng chương; tiêu đề bám nỗi lo người xem, không dựa vào tên nhân vật Kinh Thánh hay chi tiết ít người biết.
+
+## Phân tích transcript 3 video đối thủ (phụ đề tự động, 2026-10-11)
+
+| Video | View | Dài | Hangul | Kinh Thánh | Chuyện đời | CTA |
+|---|---|---|---|---|---|---|
+| 숨기라 하신 6가지 은혜 | 129K | 43' | 11,2K | gần 0 chỗ nêu chương/câu; chỉ kể Bảy Biến Hình, Phao-lô 14 năm | ít, 1 chuyện chấp sự | chỉ cuối (subscribe/like) |
+| 육체를 꺾고 영을 자유롭게 6가지 | 111K | 41' | 10,5K | 1-4 chỗ/5 phút (La 8, La 7:19) | 1 nhân vật mở+đóng ("người đàn ông ghế thứ 3") | chỉ cuối (comment) |
+| 상처 주는 가족 7가지 | 8K | 41' | 13,7K | 2-6 chỗ/5 phút, đếm điểm 1-7 | rất nhiều 권사님 | cuối (comment+subscribe) |
+
+- Hook của 2 video top: KHÔNG tease. Mở bằng 1 cảnh/ký ức cụ thể (30-60 giây) → tên gọi cảm giác chung ("비어 있다는 느낌", "말하고 싶은 마음") → đặt lại vấn đề ("không phải đức tin giả", "thói quen tự nhiên") → đặt tên khái niệm ("영적 조급증") → danh sách N가지 với biển báo "첫 번째로…".
+- Video top là bài luận tâm lý-tâm linh, ít trích dẫn chương-câu; video kém (8K) nặng Kinh Thánh + nhiều chuyện lặp dạng 권사님. → Xác nhận hướng "ít Kinh Thánh sâu".
+- Mỗi điểm = nguyên tắc + 1 ví dụ ngắn + hành động; kết bằng 1 hành động nhỏ ("chọn 1 cái, giữ 1 tuần").
+- Không có chào đầu, không soft CTA giữa bài; dài 41-43 phút. Kênh mình theo yaml vẫn giữ soft CTA 35-45% và hard CTA báo tập sau.
+- KHÔNG sao chép: họ kể tiểu sử riêng của ông (quê Chungbuk, mẹ, 50 năm mục vụ) — chưa có nguồn, trái CLAUDE.md mục 1. Tập mình không dùng.
+
+## Công thức thumbnail đã duyệt (2026-10-11) — dùng cho mọi tập
+Chủ dự án duyệt `output/2026-10-11_tuoi-gia-it-ban-be/thumb_final.png`. Mọi tham số nằm trong `channels/eundo-malsseum.yaml` (thumbnail_layout + thumbnail_text_style); chi tiết đầy đủ ở memory `thumbnail-recipe-eundo`.
+- Ảnh thật 신성종 cắt nền (`.../looks/eb3011c3a8c0c_nobg.png`) scale 1.22, mặt ở 73% bề ngang, thấy đủ hai vai; không xoay/AI dựng lại người thật.
+- Nền Higgsfield `gpt_image_2_5`: bình minh vàng trên núi sương + tia sáng + thánh giá, trái gần đen → phải vàng cam (không dùng cảnh xanh/đêm).
+- Chữ NotoSansKR-Black, 3 dòng cùng bề rộng (fit_width), caption canh giữa, khe dòng sát nhau: dòng 1 `#BDFCFC`, dòng 2 trắng trên hộp `#F60000`, dòng 3 gradient `#FBD844`→`#FAB83D`; màu đo từ thumb đối thủ.
+- Lệnh: `python tools/render_thumb.py --json <05_thumb_text.json> --bg <thumb_bg.png> --out <thumb_final.png>`.
+
 ## Hiệu suất thực tế theo từng video
 
 Mỗi lần đo = 1 dòng (cùng video có thể nhiều dòng theo ngày đo). Số liệu lấy từ YouTube Studio.

@@ -80,7 +80,7 @@ def fail(msg, code=1):
 def parse_args():
     p = argparse.ArgumentParser(description="Ghép main_text/sub_text lên ảnh nền, xuất thumbnail 1280x720.")
     p.add_argument("--json", required=True, help="Đường dẫn 05_thumb_text.json")
-    p.add_argument("--bg", required=True, help="Đường dẫn ảnh nền thumb_bg.png")
+    p.add_argument("--bg", default="", help="Đường dẫn ảnh nền thumb_bg.png (bỏ trống nếu layout.backdrop tự dựng nền)")
     p.add_argument("--out", required=True, help="Đường dẫn file đầu ra thumb_final.png")
     return p.parse_args()
 
@@ -313,11 +313,14 @@ def _style_for(spec, name, base_size):
     }
 
 
-def plan_lines(spec, font_path, base_size, max_w):
-    """Tính cỡ chữ từng dòng: theo scale của style, tự thu nhỏ riêng dòng nào vượt max_w."""
+def plan_lines(spec, font_path, base_size, max_w, fit_width=False, fit_max_scale=1.5):
+    """Tính cỡ chữ từng dòng: theo scale của style, tự thu nhỏ riêng dòng nào vượt max_w.
+
+    fit_width=True: mỗi dòng (trừ caption) được co/giãn để rộng đúng max_w → cả khối chữ thành hình chữ nhật
+    (kiểu thumbnail viral). Cỡ tối đa = base_size * fit_max_scale để dòng ngắn không phình quá."""
     items = list(spec["lines"])
     if str(spec.get("caption") or "").strip():
-        items.append({"text": spec["caption"].strip(), "style": "caption" if "caption" in spec["styles"] else None})
+        items.append({"text": spec["caption"].strip(), "style": "caption" if "caption" in spec["styles"] else None, "is_caption": True})
     planned = []
     for it in items:
         name = it.get("style")
@@ -327,6 +330,8 @@ def plan_lines(spec, font_path, base_size, max_w):
         else:
             st = _style_for(spec, name, base_size)
         size = st["size"]
+        if fit_width and name not in (None, "caption"):
+            size = max(24, round(base_size * fit_max_scale))
         while True:
             font = load_font(font_path, size)
             stroke = max(1, round(size * st["stroke_ratio"]))
@@ -339,7 +344,7 @@ def plan_lines(spec, font_path, base_size, max_w):
         if miss:
             warn(f"Font không có glyph cho {''.join(sorted(miss))!r} trong dòng {it['text']!r} → sẽ hiện ô trống. "
                  f"Thay bằng ký tự khác (vd '|' hoặc '-').")
-        planned.append({**st, "text": it["text"], "font": font, "stroke": stroke,
+        planned.append({**st, "is_caption": bool(it.get("is_caption")), "dx": 0, "text": it["text"], "font": font, "stroke": stroke,
                         "ox": ox, "oy": oy, "w": w, "h": h, "pad": pad})
     return planned
 
@@ -355,9 +360,9 @@ def draw_lines(img, planned, left, top, gap):
     for p in planned:
         off = max(3, p["size"] // 22)
         if p["box"]:
-            sd.rectangle([left + off, y + off, left + p["w"] + 2 * p["pad"] + off, y + p["h"] + 2 * p["pad"] + off],
+            sd.rectangle([left + p["dx"] + off, y + off, left + p["dx"] + p["w"] + 2 * p["pad"] + off, y + p["h"] + 2 * p["pad"] + off],
                          fill=(0, 0, 0, 170))
-        tx, ty = left + p["pad"] - p["ox"], y + p["pad"] - p["oy"]
+        tx, ty = left + p["dx"] + p["pad"] - p["ox"], y + p["pad"] - p["oy"]
         sd.text((tx + off, ty + off), p["text"], font=p["font"], fill=(0, 0, 0, 200),
                 stroke_width=p["stroke"], stroke_fill=(0, 0, 0, 200))
         y += p["h"] + 2 * p["pad"] + gap
@@ -368,8 +373,8 @@ def draw_lines(img, planned, left, top, gap):
     for p in planned:
         bh = p["h"] + 2 * p["pad"]
         if p["box"]:
-            d.rectangle([left, y, left + p["w"] + 2 * p["pad"], y + bh], fill=p["box"])
-        tx, ty = left + p["pad"] - p["ox"], y + p["pad"] - p["oy"]
+            d.rectangle([left + p["dx"], y, left + p["dx"] + p["w"] + 2 * p["pad"], y + bh], fill=p["box"])
+        tx, ty = left + p["dx"] + p["pad"] - p["ox"], y + p["pad"] - p["oy"]
         # Viền = mặt nạ chữ "nở" ra (blur + ngưỡng), KHÔNG dùng stroke_width của Pillow:
         # FreeType stroker bỏ sót nét ở vài font Hàn (vd nét ㅏ của '아' trong Black Han Sans).
         mask = Image.new("L", img.size, 0)
@@ -401,27 +406,138 @@ def dilate(mask, radius):
     return grown.filter(ImageFilter.GaussianBlur(1))  # khử răng cưa mép viền
 
 
-def render_lines_mode(bg, spec, side, text_width_pct, main_max_px, font_path):
+def render_lines_mode(bg, spec, side, text_width_pct, main_max_px, font_path, fit_width=False, margin_x=MARGIN_X, caption_center=False, offset_y_pct=0, fill_height_pct=0):
     W, H = bg.size
-    max_w = int(W * text_width_pct / 100) - MARGIN_X if side == "left" else W - 2 * MARGIN_X
+    max_w = int(W * text_width_pct / 100) - margin_x if side == "left" else W - 2 * margin_x
     max_h = int(H * 0.86)
     base = main_max_px
+    tw = max_w
     while True:
-        planned = plan_lines(spec, font_path, base, max_w)
+        planned = plan_lines(spec, font_path, base, tw, fit_width=fit_width)
         gap = max(6, round(base * 0.10))
         total_h = sum(p["h"] + 2 * p["pad"] for p in planned) + gap * (len(planned) - 1)
         if total_h <= max_h or base <= 40:
             break
-        base -= 4
+        if fit_width:
+            tw = int(tw * 0.97)  # khối chữ quá cao → thu hẹp bề rộng mục tiêu
+        else:
+            base -= 4
+    if side == "left" and fill_height_pct and len(planned) > 1:
+        # kéo giãn khoảng cách giữa các dòng để khối chữ cao ~fill_height_pct% khung (tối đa mỗi khe = 0.35 * cỡ chữ cơ sở)
+        want = int(H * fill_height_pct / 100)
+        if want > total_h:
+            extra = min((want - total_h) // (len(planned) - 1), round(base * 0.35))
+            gap += extra
+            total_h += extra * (len(planned) - 1)
     top = max(20, int((H - total_h) / 2)) if side == "left" else max(20, H - MARGIN_BOTTOM - total_h)
+    if side == "left" and offset_y_pct:  # dịch cả khối chữ xuống (+) / lên (-), giữ cách đáy ≥ 16px
+        top = max(20, min(top + int(H * offset_y_pct / 100), H - 16 - total_h))
     if side == "left":
-        draw_lines(bg, planned, MARGIN_X, top, gap)
+        if caption_center:  # chú thích (tên tác giả) canh giữa theo bề rộng khối chữ
+            block_w = max(p["w"] + 2 * p["pad"] for p in planned if not p["is_caption"])
+            for p in planned:
+                if p["is_caption"]:
+                    p["dx"] = round((block_w - (p["w"] + 2 * p["pad"])) / 2)
+        draw_lines(bg, planned, margin_x, top, gap)
     else:  # bottom_center: vẽ từng dòng căn giữa
         y = top
         for p in planned:
             draw_lines(bg, [p], int((W - p["w"] - 2 * p["pad"]) / 2), y, 0)
             y += p["h"] + 2 * p["pad"] + gap
     return planned
+
+
+def make_backdrop(cfg, size):
+    """Nền tự dựng (không cần ảnh): đen-nâu ở trái → quầng vàng ấm sau nhân vật bên phải, tia sáng + thánh giá mờ.
+    cfg (yaml → thumbnail_layout.backdrop): base, glow, glow_x_pct, glow_y_pct, glow_radius_pct, rays (số tia, 0=tắt),
+    ray_alpha, cross (true/false), cross_color, cross_alpha, cross_x_pct, cross_y_pct, cross_h_pct, vignette."""
+    import math
+
+    import numpy as np
+    from PIL import Image, ImageDraw, ImageFilter
+
+    W, H = size
+    base = np.array(parse_color(cfg.get("base", "#0A0805"), "#0A0805", "backdrop.base"), dtype=np.float32)
+    glow = np.array(parse_color(cfg.get("glow", "#D9A22B"), "#D9A22B", "backdrop.glow"), dtype=np.float32)
+    cx, cy = W * float(cfg.get("glow_x_pct", 84)) / 100, H * float(cfg.get("glow_y_pct", 42)) / 100
+    rad = W * float(cfg.get("glow_radius_pct", 55)) / 100
+    xs, ys = np.meshgrid(np.arange(W, dtype=np.float32), np.arange(H, dtype=np.float32))
+    d = np.sqrt((xs - cx) ** 2 + ((ys - cy) * 1.15) ** 2) / rad
+    g = np.clip(1.0 - d, 0, 1) ** 1.6                      # quầng sáng chính
+    haze = np.clip(xs / W, 0, 1) ** 2.2 * 0.35            # sương vàng nhạt dần sang phải
+    k = np.clip(g + haze, 0, 1)[..., None]
+    arr = base + (glow - base) * k
+    img = Image.fromarray(np.clip(arr, 0, 255).astype(np.uint8), "RGB").convert("RGBA")
+
+    rays = int(cfg.get("rays", 0))
+    if rays:
+        layer = Image.new("RGBA", size, (0, 0, 0, 0))
+        ld = ImageDraw.Draw(layer)
+        ox, oy = cx - W * 0.05, -H * 0.15
+        a = int(255 * float(cfg.get("ray_alpha", 0.12)))
+        for i in range(rays):
+            ang = math.radians(62 + i * (60 / max(1, rays - 1)))
+            wdt = math.radians(2.4)
+            pts = [(ox, oy)] + [(ox + 2400 * math.cos(ang + s), oy + 2400 * math.sin(ang + s)) for s in (-wdt, wdt)]
+            ld.polygon(pts, fill=(255, 235, 170, a))
+        img.alpha_composite(layer.filter(ImageFilter.GaussianBlur(14)))
+
+    if cfg.get("cross"):
+        c = parse_color(cfg.get("cross_color", "#4A2E0A"), "#4A2E0A", "backdrop.cross_color")
+        ch = H * float(cfg.get("cross_h_pct", 62)) / 100
+        cw = ch * 0.62
+        x0, y0 = W * float(cfg.get("cross_x_pct", 93)) / 100, H * float(cfg.get("cross_y_pct", 12)) / 100
+        t = ch * 0.085
+        layer = Image.new("RGBA", size, (0, 0, 0, 0))
+        ld = ImageDraw.Draw(layer)
+        al = int(255 * float(cfg.get("cross_alpha", 0.45)))
+        ld.rectangle([x0 - t / 2, y0, x0 + t / 2, y0 + ch], fill=c + (al,))
+        ld.rectangle([x0 - cw / 2, y0 + ch * 0.28, x0 + cw / 2, y0 + ch * 0.28 + t], fill=c + (al,))
+        img.alpha_composite(layer.filter(ImageFilter.GaussianBlur(2)))
+
+    vg = float(cfg.get("vignette", 0.35))
+    if vg > 0:
+        dd = np.sqrt(((xs - W / 2) / (W / 2)) ** 2 + ((ys - H / 2) / (H / 2)) ** 2)
+        a = (np.clip(dd - 0.55, 0, 1) * vg * 255).astype(np.uint8)
+        v = Image.new("RGBA", size, (0, 0, 0, 255))
+        v.putalpha(Image.fromarray(a))
+        img.alpha_composite(v)
+    return img
+
+
+def composite_subject(bg, cfg):
+    """Dán ảnh nhân vật đã cắt nền (PNG RGBA) lên bg. Cấu hình (từ yaml → thumbnail_layout.subject):
+        image: đường dẫn (tương đối project root), scale: hệ số phóng,
+        face_x_src/face_x_pct: tâm mặt trong ảnh gốc (px) và vị trí mong muốn (% bề ngang khung),
+        head_top_src/head_top_pct: đỉnh tóc trong ảnh gốc (px) và vị trí mong muốn (% chiều cao khung),
+        glow: màu viền sáng mờ phía sau (tùy chọn), glow_radius, glow_alpha."""
+    from PIL import Image, ImageFilter
+
+    path = Path(cfg["image"])
+    if not path.is_absolute():
+        path = ROOT / path
+    if not path.is_file():
+        warn(f"Không thấy ảnh nhân vật {path} → bỏ qua.")
+        return
+    W, H = bg.size
+    sub = Image.open(path).convert("RGBA")
+    sc = float(cfg.get("scale", 1.0))
+    sub = sub.resize((round(sub.width * sc), round(sub.height * sc)), Image.LANCZOS)
+    x = round(W * float(cfg.get("face_x_pct", 80)) / 100 - float(cfg.get("face_x_src", sub.width / 2 / sc)) * sc)
+    y = round(H * float(cfg.get("head_top_pct", 10)) / 100 - float(cfg.get("head_top_src", 0)) * sc)
+    if cfg.get("glow"):
+        g = parse_color(cfg["glow"], "#FFD9A0", "subject.glow")
+        r = int(cfg.get("glow_radius", 22))
+        a = sub.split()[-1].filter(ImageFilter.GaussianBlur(r)).point(lambda v: int(v * float(cfg.get("glow_alpha", 0.55))))
+        layer = Image.new("RGBA", bg.size, (0, 0, 0, 0))
+        glow = Image.new("RGBA", sub.size, g + (255,))
+        glow.putalpha(a)
+        layer.paste(glow, (x, y), glow)
+        bg.alpha_composite(layer)
+    layer = Image.new("RGBA", bg.size, (0, 0, 0, 0))
+    layer.paste(sub, (x, y), sub)
+    bg.alpha_composite(layer)
+    log(f"Đã ghép nhân vật {path.name} @ ({x},{y}) scale {sc}")
 
 
 def apply_overlay(bg, color, side, text_width_pct, max_alpha=225):
@@ -455,12 +571,19 @@ def main():
     color_main = parse_color(spec.get("color_main"), "#F5A623", "color_main")
     color_overlay = parse_color(spec.get("color_bg_overlay"), "#0A1128", "color_bg_overlay")
 
-    try:
-        bg = Image.open(args.bg).convert("RGBA")
-    except FileNotFoundError:
-        fail(f"Không tìm thấy ảnh nền: {args.bg}")
-    except OSError as e:
-        fail(f"Không đọc được ảnh nền {args.bg}: {e}")
+    layout0 = spec.get("layout") or {}
+    if layout0.get("backdrop") and not (args.bg and Path(args.bg).is_file()):
+        bg = make_backdrop(layout0["backdrop"], SIZE)
+        log("Nền tự dựng từ layout.backdrop (không có --bg).")
+    else:
+        if not args.bg:
+            fail("Thiếu --bg (và layout.backdrop không có).")
+        try:
+            bg = Image.open(args.bg).convert("RGBA")
+        except FileNotFoundError:
+            fail(f"Không tìm thấy ảnh nền: {args.bg}")
+        except OSError as e:
+            fail(f"Không đọc được ảnh nền {args.bg}: {e}")
 
     if bg.size != SIZE:
         log(f"Ảnh nền {bg.width}x{bg.height} → chuẩn hóa về {SIZE[0]}x{SIZE[1]} (scale + crop giữa).")
@@ -478,12 +601,21 @@ def main():
     text_width_pct = float(layout.get("text_width_pct", 55))
     main_max_px = int(layout.get("main_max_px", 130))
 
-    apply_overlay(bg, color_overlay, side, text_width_pct, int(layout.get("overlay_alpha", 225)))
+    if int(layout.get("overlay_alpha", 225)) > 0:
+        apply_overlay(bg, color_overlay, side, text_width_pct, int(layout.get("overlay_alpha", 225)))
 
     font_path = resolve_font_path(spec.get("font_title"))
 
+    if layout.get("subject"):
+        composite_subject(bg, layout["subject"])
+
     if spec.get("lines"):
-        planned = render_lines_mode(bg, spec, side, text_width_pct, main_max_px, font_path)
+        planned = render_lines_mode(bg, spec, side, text_width_pct, main_max_px, font_path,
+                                    fit_width=bool(layout.get("fit_width")),
+                                    margin_x=int(layout.get("margin_x", MARGIN_X)),
+                                    caption_center=bool(layout.get("caption_center")),
+                                    offset_y_pct=float(layout.get("text_offset_y_pct", 0)),
+                                    fill_height_pct=float(layout.get("text_fill_height_pct", 0)))
         save(bg, args.out)
         log("lines: " + " | ".join(f"{p['text']} @{p['font'].size}px" for p in planned))
         return

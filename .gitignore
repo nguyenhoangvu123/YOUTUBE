@@ -7,3 +7,6 @@ desktop.ini
 
 # GitHub chặn file > 100MB — video stock tải lại từ nguồn khi cần
 source edit/video/*.mp4
+
+# Không commit file giọng (nặng, sinh lại được) — CLAUDE.md mục 2
+output/**/*.mp3

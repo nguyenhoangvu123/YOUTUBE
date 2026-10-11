@@ -70,7 +70,7 @@ output/YYYY-MM-DD_slug-khong-dau/
 
 ## 6. Quy trình bắt buộc khi chạy `tao-video`
 
-1. Đọc `CLAUDE.md` (file này) + `channels/<id>.yaml`
+1. Đọc `CLAUDE.md` (file này) + `channels/<id>.yaml` + `channels/<id>_script_playbook.md` (nếu có)
 2. Đọc `06_series_state.json` của video gần nhất cùng kênh (nếu có)
 3. Sinh `01_ideas.md` → `02_script.txt` → `03_titles.md` → `04_description.md`
    → `05_thumb_text.json` → `06_series_state.json`

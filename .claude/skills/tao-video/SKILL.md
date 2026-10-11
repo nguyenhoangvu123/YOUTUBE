@@ -38,6 +38,10 @@ description: Lệnh điều phối duy nhất để sản xuất 1 video hoàn c
 5. Mục "Giả thuyết đang thử nghiệm" → nếu 1 giả thuyết đã đủ dữ liệu để
    kết luận, đề xuất cập nhật "Công thức đã xác nhận hiệu quả" cho người
    dùng duyệt (không tự sửa mục này, chỉ đề xuất).
+6. **Đọc `channels/<channel_id>_script_playbook.md` nếu tồn tại (từ 2026-10-11, kênh
+   eundo-malsseum có).** Đây là cách làm kịch bản đã được chủ dự án duyệt (hướng nội dung
+   tâm linh cõi chết, công thức hook, cấu trúc 5 điểm, số đo, tiêu đề, lưu ý công cụ).
+   Nếu playbook mâu thuẫn với các bước bên dưới (vd hook 3 câu, motif, vignette), PLAYBOOK THẮNG.
 
 ## Bước 1 — `01_ideas.md`
 
@@ -60,6 +64,12 @@ sẵn, mới viết ý tưởng thô như bên dưới:
 - Câu trích dẫn "đóng đinh" dự kiến (câu sẽ dùng làm tiêu đề/thumbnail)
 
 ## Bước 2 — `02_script.txt`
+
+**Nếu kênh có `<channel_id>_script_playbook.md` (eundo-malsseum): viết theo playbook** — hook 4-5 câu ≤ 80 어절
+(cảnh người xem tự nhận ra → câu hỏi/nghịch lý → twist có căn cứ → vòng mở), cấu trúc 10 phần (khái niệm có tên,
+N điểm có biển báo, câu đóng đinh lặp 4 lần, soft CTA 35-45%, 1 hành động/điểm, cầu nguyện, hard CTA cụ thể),
+≥ 7.700 âm tiết Hangul, Kinh Thánh 20-30%, trục nội dung tâm linh cõi chết/hậu sinh. Các quy tắc "3 câu đầu" bên dưới
+là bản cũ cho kênh khác (vd mun-yeolda).
 
 **Quy tắc bắt buộc về mở đầu (áp dụng trước mọi quy tắc khác trong bước này):**
 - 3 câu đầu tiên PHẢI chứa trọn vẹn nghịch lý/hook chính của nhân vật
@@ -349,6 +359,11 @@ Model và tham số lấy từ `channels/<channel_id>.yaml` → `thumbnail_bg`, 
    `python tools/make_bg.py --from "<url_ảnh_higgsfield>" --out output/<slug>/thumb_bg.png`
 4. Chạy `python tools/render_thumb.py --json output/<slug>/05_thumb_text.json
    --bg output/<slug>/thumb_bg.png --out output/<slug>/thumb_final.png`
+
+**Chế độ ảnh thật (từ 2026-10-11):** nếu yaml có `thumbnail_layout.subject`, KHÔNG sinh/dùng nhân vật hư cấu — `render_thumb.py` tự ghép ảnh cắt nền đó
+(vị trí qua scale/face_x/head_top). Chỉ sinh NỀN KHÔNG NGƯỜI bằng Higgsfield (`gpt_image_2_5`, ~3 credit/ảnh): nửa trái rất tối/ít chi tiết, tâm-phải sáng ấm,
+thánh giá nhỏ ở mép phải, khác tập trước về thời điểm/cảnh. Chữ theo khung cố định: dòng 1 xanh cyan → dòng 2 trắng trên hộp đỏ → dòng 3 vàng to nhất;
+`layout.fit_width` tự co đều bề rộng.
 
 ## Bước 8 — Kiểm tra chéo cuối cùng (bắt buộc trước khi báo hoàn thành)
 
