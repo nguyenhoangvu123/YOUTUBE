@@ -1,0 +1,62 @@
+{
+  "channel_id": "eundo-malsseum",
+  "episode_date": "2026-10-15",
+  "episode_title": "[신성종 목사] 반려동물이 죽으면 다시 만날까요~성경의 4가지 대답",
+  "series_label": "열한 번째 말씀",
+  "previous_promise_fulfilled": "Đúng lời hứa cuối tập 10: '다음 시간에는 반려동물이 죽으면 어떻게 되는지에 대해… 창세기 일 장과 시편 삼십육 편 육 절'. Kịch bản dùng 시 36:6 + 창 1 (và thêm 전 3:21). Lời hứa tập 5 (후회/베드로) vẫn chưa thực hiện.",
+  "characters_used": [
+    "신성종 목사 - người dẫn (không dùng dữ kiện đời thực)",
+    "한 장로님 - hư cấu, nuôi chó 보리 14 năm, bị nói '고작 개 한 마리' (hook, khung mở/đóng)",
+    "한 분 (đàn ông góa vợ) - hư cấu, sống 10 năm với mèo, 'giọng nói duy nhất trong nhà'",
+    "한 아버지 + 일곱 살 아이 - hư cấu, mèo 나비 chết, câu hỏi 'gặp lại được không'",
+    "한 부부 - hư cấu, mèo 17 năm, quyết định an tử, tự trách"
+  ],
+  "promise_for_next_episode": "다음 시간에는 치매에 걸리면 믿음도 사라지는지에 대해 말씀드리겠습니다. 기억이 흐려져도 끊어지지 않는 것이 무엇인지, 로마서 팔 장 삼십팔 절에서 삼십구 절의 말씀으로 함께 살펴보겠습니다.",
+  "vignettes_used": [
+    "밥그릇 + '고작 개 한 마리' (hook, 한 장로님 + 보리)",
+    "전 3:21 누가 알랴 vs 시 36:6 사람과 짐승을 구원 (vòng mở hook, trả ở đoạn ~14/93)",
+    "창 1:25, 창 2:19 이름 지어 줌, 잠 12:10, 눅 12:6 참새, 욘 4장 가축",
+    "3 quan điểm về thú cưng sau khi chết (Rm 8, Is 11 / 'không rõ' / không có linh hồn vĩnh cửu) — 'tôi không biết'",
+    "한 아버지와 일곱 살 아이: 하나님, 나비를 잘 부탁해요",
+    "요 11:35, 롬 12:15; 창 9장 언약; 삼하 12장 나단의 암양 비유 (뜻을 풀어서)",
+    "한 분(góa vợ) + mèo: '고작이 아니라 전부'",
+    "롬 8:26 기도가 안 나올 때; 시편 따져 묻는 기도",
+    "한 부부: 안락사 결정 죄책감 → 사진 + 감사 기도",
+    "한 장로님 결말: 밥그릇을 씻어 올리고 처음 '보리야' 부름 + 감사 기도"
+  ],
+  "motif_variant": "서재의 등불 — chỉ nhắc 1 lần ở cuối. Không dùng 문.",
+  "concept_name": "고작이라는 말",
+  "core_sentence": "작은 생명을 사랑한 마음은 부끄러운 마음이 아닙니다.",
+  "hook_style": "Hình ảnh nhỏ nhìn thấy được (밥그릇) + câu nói làm đau thêm + 2 trích dẫn Kinh Thánh nghịch nhau + hạn '오 분 안에'. Tập 12 nên đổi kiểu mở (vd. con số, hoặc câu nói nguyên văn).",
+  "number_rotation": "Tập 8/9 không số, tập 10 = 3, tập 11 = 4 → tập 12 nên không số hoặc 5/6/7 (tránh 4).",
+  "metrics": {
+    "hangul_syllables": 8011,
+    "paragraphs": 93,
+    "hook_eojeol": 73,
+    "soft_cta_pct": 42.4,
+    "core_sentence_count": 4,
+    "est_minutes": "≈ 31-32 (8011 / 4,35 âm tiết/giây + nghỉ)"
+  },
+  "scripture_to_verify": ["전 3:21", "시 36:6 (nửa cuối)", "잠 12:10", "눅 12:6", "요 11:35", "롬 12:15", "살전 5:18"],
+  "thumbnail": {
+    "subject": "Ảnh thật cắt nền (eb3011c3a8c0c_nobg.png); nền Higgsfield mới: bình minh vàng trên đồi sương + thánh giá + bóng chú chó nhỏ ngồi quay lưng (bị ảnh thật che — xem ghi chú)",
+    "subject_ref_job_id": "1b460f45-0291-4d76-8ad7-b7ab5e579251 (nền đã chọn; bản còn lại 809dcd7b-7818-4c33-a537-13af3afc96b5, đã bỏ)",
+    "character_id": "",
+    "variant": "A",
+    "first_line_keyword": "반려동물이",
+    "bg_variation": {
+      "time": "bình minh vàng",
+      "season": "n/a",
+      "object": "bóng chó nhỏ + thánh giá (chó bị ảnh thật che, chỉ thấy thánh giá)",
+      "expression": "giữ nguyên ảnh gốc (cười)",
+      "shot_size": "cận mặt + vai"
+    },
+    "lines": ["반려동물이 죽으면", "다시 만날까요?", "4가지 대답", "(caption) 신성종 목사"],
+    "ab_variant_B_lines": ["먼저 간 그 아이를", "다시 만날까요?", "4가지 대답"],
+    "status": "đã dựng thumb_bg.png + thumb_final.png (2026-10-15)"
+  },
+  "upload": {
+    "planned_at": "2026-10-27 05:30 KST (= 03:30 giờ VN)",
+    "slot_rule": "TUE 05:30 — slot kế tiếp sau SAT 2026-10-24 (planned_at của tập 10). Nếu muốn đăng sớm hơn vì video 13/10 đang được đề xuất, đăng đúng khung 05:30 KST của ngày gần nhất."
+  }
+}

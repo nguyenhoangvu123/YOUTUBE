@@ -1,0 +1,60 @@
+{
+  "channel_id": "eundo-malsseum",
+  "episode_date": "2026-10-15",
+  "episode_title": "[신성종 목사] 화장을 하면 부활하지 못할까요~성경의 4가지 대답",
+  "series_label": "열네 번째 말씀",
+  "previous_promise_fulfilled": "Đúng lời hứa cuối tập 13: '화장을 하면 부활하지 못하는지… 몸이 흙으로 돌아가도 이어지는 것이 무엇인지, 창세기 삼 장 십구 절과 고린도전서 십오 장 삼십오 절에서 삼십팔 절'. Kịch bản đọc 창 3:19 và 고전 15:36, 38.",
+  "characters_used": [
+    "신성종 목사 - người dẫn (không dùng dữ kiện đời thực)",
+    "한 맏아들 + 어머니 (di chúc muốn hỏa táng) + 한 친척 어른 - hư cấu, hook + khung mở/đóng; kết: đọc Gioan 11:25 trong Kinh Thánh của mẹ, ôm người họ hàng",
+    "한 장례지도사 - hư cấu, hai câu hỏi gia đình hay hỏi trước khi hỏa táng",
+    "바다에서 아들을 잃은 한 어머니 - hư cấu, 'biển cũng là của Chúa'",
+    "한 농부 - hư cấu, 'gieo hạt không tiếc'",
+    "한 중년의 딸 - hư cấu, hỏa táng cha 10 năm trước, gỡ được tự trách"
+  ],
+  "promise_for_next_episode": "다음 시간에는 기도하고 싶지 않은 날에는 어떻게 해야 하는지에 대해 말씀드리겠습니다. 마음은 원하는데 기도가 나오지 않는 밤을 예수님도 겟세마네에서 지나가셨습니다. 마태복음 이십육 장 삼십팔 절에서 사십일 절의 말씀으로 함께 살펴보겠습니다.",
+  "vignettes_used": [
+    "맏아들: lời họ hàng 'hỏa táng thì không phục sinh' + di chúc mẹ (hook)",
+    "계 20:13 biển trả lại người chết (trả vòng mở ở đoạn 13-15)",
+    "창 23 (매장), 요 19 (예수 새 무덤), 삼상 31 + 삼하 2 (đốt thi hài, được coi là căn cứ hoặc ngoại lệ — nói rõ cả hai), 살전 4:13",
+    "장례지도사: 'có phục sinh được không?' và 'có nóng không?'",
+    "창 3:19, lập luận bất công nếu phục sinh tùy thân thể (nói rõ là suy nghĩ của người nói), 바다에서 아들을 잃은 어머니 + 시 95:5",
+    "고전 15:35-38 hạt giống, 요 12:24, 롬 4:17, 창 2:7, 고전 15:42-44 'gieo'; 한 농부",
+    "4 hành động cho người ở lại; 요 19 니고데모, 고전 6:19, 전 7:2; 한 중년의 딸; 출 20:12"
+  ],
+  "motif_variant": "서재의 등불 — chỉ nhắc 1 lần ở cuối (đoạn 82). Không dùng 문.",
+  "concept_name": "보관함의 부활",
+  "core_sentence": "부활은 남은 몸을 찾는 일이 아니라, 하나님이 몸을 주시는 일입니다.",
+  "hook_style": "Câu hỏi thẳng người xem + hậu quả thực tế (맏아들 mất ngủ) + manh mối 계 20:13 + hạn '오 분 안에'. Tập 15 nên đổi kiểu mở (vd. cảnh/hành động hoặc con số).",
+  "number_rotation": "Tập 12 = không số, tập 13 = 3, tập 14 = 4. Tập 15 nên không số hoặc 5/6/7 (tránh 4).",
+  "metrics": {
+    "hangul_syllables": 7755,
+    "paragraphs": 85,
+    "hook_eojeol": 63,
+    "soft_cta_pct": 44.5,
+    "core_sentence_count": 4,
+    "est_minutes": "≈ 30-31"
+  },
+  "scripture_to_verify": ["계 20:13", "살전 4:13", "창 3:19", "고전 15:36, 38", "요 12:24", "요 11:25", "출 20:12", "전 7:2", "고전 6:19", "시 95:5", "삼하 2:5 (đoạn diễn giải)", "창 2:7"],
+  "thumbnail": {
+    "subject": "Ảnh thật cắt nền (eb3011c3a8c0c_nobg.png); nền Higgsfield mới không người: cánh đồng lúa mì bình minh cuối thu, thánh giá nhỏ phía xa bên phải",
+    "subject_ref_job_id": "49e4119c-b089-4846-ab50-d41419210d31",
+    "character_id": "seo-eundo_v1",
+    "variant": "A",
+    "first_line_keyword": "화장을",
+    "bg_variation": {
+      "time": "bình minh vàng (cánh đồng lúa mì)",
+      "season": "cuối thu (khớp ngày đăng đầu tháng 11)",
+      "object": "bông lúa mì (gợi hạt giống 고전 15) + thánh giá xa, không động vật",
+      "expression": "giữ nguyên ảnh gốc (cười)",
+      "shot_size": "cận mặt + vai"
+    },
+    "lines": ["화장을 하면", "부활 못 할까요?", "4가지 대답", "(caption) 신성종 목사"],
+    "ab_variant_B_lines": ["어머니를 화장해도", "될까요?", "성경의 대답"],
+    "status": "đã dựng thumb_bg.png + thumb_final.png (2026-10-15)"
+  },
+  "upload": {
+    "planned_at": "2026-11-03 05:30 KST (= 03:30 giờ VN)",
+    "slot_rule": "TUE 05:30 — slot kế tiếp sau SAT 2026-10-31 (planned_at của tập 13)."
+  }
+}

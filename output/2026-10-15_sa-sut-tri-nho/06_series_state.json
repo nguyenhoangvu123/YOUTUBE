@@ -1,0 +1,58 @@
+{
+  "channel_id": "eundo-malsseum",
+  "episode_date": "2026-10-15",
+  "episode_title": "[신성종 목사] 치매에 걸리면 믿음도 사라질까요~성경이 분명히 말하는 대답",
+  "series_label": "열두 번째 말씀",
+  "previous_promise_fulfilled": "Đúng lời hứa cuối tập 11: '치매에 걸리면 믿음도 사라지는지… 기억이 흐려져도 끊어지지 않는 것이 무엇인지, 로마서 팔 장 삼십팔 절에서 삼십구 절'. Kịch bản đọc nguyên 롬 8:38-39 và chỉ ra danh sách không có chữ 기억.",
+  "characters_used": [
+    "신성종 목사 - người dẫn (không dùng dữ kiện đời thực)",
+    "한 며느리 + 시아버님 - hư cấu, hook + khung mở/đóng; 시아버님 không đọc nổi 주기도문, kết: nắm chặt tay con dâu",
+    "한 남편 + vợ bị sa sút trí tuệ - hư cấu, hát thánh ca mỗi tối, vợ nắm tay (không coi là bằng chứng)",
+    "한 요양보호사 - hư cấu, hát 찬송 cho cụ không nói"
+  ],
+  "promise_for_next_episode": "다음 시간에는 천국에서 다시 살아나는 몸은 몇 살의 모습인지에 대해 말씀드리겠습니다. 성경이 말하는 것과 말하지 않는 것을, 고린도전서 십오 장 사십이 절에서 사십사 절의 말씀으로 함께 살펴보겠습니다.",
+  "vignettes_used": [
+    "며느리: 아버님이 주기도문 첫 줄에서 멈춤 + câu hỏi 'trí nhớ mất thì đức tin ở đâu' (hook)",
+    "롬 8:38-39 đọc nguyên văn, danh sách không có 기억 (trả vòng mở ở đoạn 15)",
+    "아기와 아버지 (con không cần nhớ tên cha), 요 1:12, 엡 2:8-9, 요 10:27",
+    "사 49:15, 눅 15 목자 메고 옴, 사 46:4; 한 남편 hát thánh ca cho vợ",
+    "요 9 (không phải tội), 시 103:14, 창 1:27 (giá trị con người không do trí nhớ)",
+    "막 2 bốn người khiêng người bại: 대신 기억해 주는 믿음; 한 요양보호사; 시 46:10; 마 11:28 người chăm sóc",
+    "며느리 mất kiên nhẫn lần hỏi thứ mười + khóc; kết: mỗi tối con dâu đọc 주기도문 thay, ông nắm tay"
+  ],
+  "motif_variant": "서재의 등불 — chỉ nhắc 1 lần ở cuối (đoạn 94). Không dùng 문.",
+  "concept_name": "기억 시험 / 대신 기억해 주는 믿음",
+  "core_sentence": "기억은 흐려져도, 붙드신 손은 흐려지지 않습니다.",
+  "hook_style": "Câu nói nguyên văn (lời con dâu) + câu hỏi + manh mối danh sách 롬 8:38-39 + hạn '오 분 안에'. Tập 13 nên đổi kiểu mở (vd. con số hoặc cảnh/hành động).",
+  "number_rotation": "Tập 10 = 3, tập 11 = 4, tập 12 = không số trong tiêu đề (kịch bản 5 điểm). Tập 13 có thể dùng 6/7/3.",
+  "metrics": {
+    "hangul_syllables": 8149,
+    "paragraphs": 97,
+    "hook_eojeol": 70,
+    "soft_cta_pct": 44.3,
+    "core_sentence_count": 4,
+    "est_minutes": "≈ 31-32"
+  },
+  "scripture_to_verify": ["롬 8:38-39", "엡 2:8-9", "요 10:27", "사 49:15", "시 103:14", "막 2:5 (그들의 믿음)", "마 11:28"],
+  "thumbnail": {
+    "subject": "Ảnh thật cắt nền (eb3011c3a8c0c_nobg.png); nền Higgsfield mới không người: bình minh vàng, đường quê trong sương, thánh giá nhỏ ở mép phải",
+    "subject_ref_job_id": "e803a10f-8070-4ea7-9cbc-63a93888a200",
+    "character_id": "seo-eundo_v1",
+    "variant": "A",
+    "first_line_keyword": "치매에",
+    "bg_variation": {
+      "time": "bình minh vàng (đường quê trong sương)",
+      "season": "thu (khớp ngày đăng cuối tháng 10)",
+      "object": "đường quê + thánh giá nhỏ, không động vật",
+      "expression": "giữ nguyên ảnh gốc (cười)",
+      "shot_size": "cận mặt + vai"
+    },
+    "lines": ["치매에 걸리면", "믿음도 사라질까요?", "성경의 대답", "(caption) 신성종 목사"],
+    "ab_variant_B_lines": ["부모님이 하나님을", "잊으셨다면", "성경의 대답"],
+    "status": "đã dựng thumb_bg.png + thumb_final.png (2026-10-15)"
+  },
+  "upload": {
+    "planned_at": "2026-10-29 05:30 KST (= 03:30 giờ VN)",
+    "slot_rule": "THU 05:30 — slot kế tiếp sau TUE 2026-10-27 (planned_at của tập 11)."
+  }
+}

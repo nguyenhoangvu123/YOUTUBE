@@ -1,0 +1,116 @@
+{
+  "main_text": "몇 살일까요?\n3가지 대답",
+  "sub_text": "천국에서 나는",
+  "lines": [
+    {
+      "text": "천국에서 나는",
+      "style": "top"
+    },
+    {
+      "text": "몇 살일까요?",
+      "style": "box"
+    },
+    {
+      "text": "3가지 대답",
+      "style": "hero"
+    }
+  ],
+  "caption": "신성종 목사",
+  "font_title": "NotoSansKR-Black.ttf",
+  "variant": "A",
+  "color_main": "#E8A33D",
+  "color_bg_overlay": "#2B1D14",
+  "ab_variant_B": {
+    "note": "Test & compare: chỉ đổi chữ (tiêu đề phương án 3)",
+    "lines": [
+      "먼저 간 가족은",
+      "몇 살일까요?",
+      "3가지 대답"
+    ]
+  },
+  "layout": {
+    "text_side": "left",
+    "text_width_pct": 61,
+    "margin_x": 44,
+    "text_offset_y_pct": 0,
+    "text_fill_height_pct": 0,
+    "main_max_px": 150,
+    "sub_max_px": 64,
+    "overlay_alpha": 0,
+    "fit_width": true,
+    "caption_center": true,
+    "backdrop": {
+      "base": "#0B0907",
+      "glow": "#D9A02A",
+      "glow_x_pct": 86,
+      "glow_y_pct": 40,
+      "glow_radius_pct": 58,
+      "rays": 7,
+      "ray_alpha": 0.1,
+      "cross": true,
+      "cross_color": "#3D2509",
+      "cross_alpha": 0.6,
+      "cross_x_pct": 66,
+      "cross_y_pct": 14,
+      "cross_h_pct": 58,
+      "vignette": 0.3
+    },
+    "subject": {
+      "image": "characters/eundo-malsseum/seo-eundo_v1/looks/eb3011c3a8c0c_nobg.png",
+      "scale": 1.22,
+      "face_x_src": 435,
+      "face_x_pct": 73,
+      "head_top_src": 314,
+      "head_top_pct": 3,
+      "glow": "#FFE2A0",
+      "glow_radius": 16,
+      "glow_alpha": 0.35
+    }
+  },
+  "styles": {
+    "top": {
+      "color": "#BDFCFC",
+      "scale": 0.92,
+      "stroke": "#000000",
+      "stroke_ratio": 0.085
+    },
+    "box": {
+      "color": "#FFFFFF",
+      "box": "#F60000",
+      "scale": 0.92,
+      "stroke": "#000000",
+      "stroke_ratio": 0.06,
+      "box_pad": 0.12
+    },
+    "hero": {
+      "gradient": [
+        "#FBD844",
+        "#FAB83D"
+      ],
+      "scale": 1.15,
+      "stroke": "#000000",
+      "stroke_ratio": 0.09
+    },
+    "white": {
+      "color": "#FFFFFF",
+      "scale": 0.92,
+      "stroke": "#000000",
+      "stroke_ratio": 0.08
+    },
+    "caption": {
+      "color": "#F8F8F8",
+      "scale": 0.36,
+      "stroke": "#000000",
+      "stroke_ratio": 0.1
+    },
+    "hero_xl": {
+      "gradient": [
+        "#FBD844",
+        "#FAB83D"
+      ],
+      "scale": 1.6,
+      "stroke": "#000000",
+      "stroke_ratio": 0.07
+    }
+  }
+}

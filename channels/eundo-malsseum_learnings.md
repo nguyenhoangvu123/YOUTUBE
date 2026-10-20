@@ -105,6 +105,12 @@ Cột có dấu `≈` là tự tính: AVD ≈ thời gian xem ÷ views; views t�
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | _(tập 1 — Studio chưa phân bổ số liệu, tính đến 2026-10-05)_ | 아내의 관 앞에서 목사도 답하지 못했습니다｜천국에서 먼저 간 가족을 알아볼까요 | Thiên đàng | A (Câu hỏi) | | | | | | | | |
 | 2026-10-03 (T7) 10:00 VN = 12:00 KST — lệch slot 05:30 KST | 아내가 40년 동안 목사인 저에게도 숨긴 일｜드러내면 사라지는 은혜 5가지 | Bí mật | C (Con số) | từ lúc đăng → 2026-10-05 (~2 ngày, ≈ mốc 48h) | 674 | 1,9% | 19 | 2,3 | 7:55 / 32:13 ≈ 25% | 0 | Tỷ lệ giữ chân: Studio chưa hiển thị (quá ít views). ≈ 13 views từ hiển thị, ~6 từ nguồn ngoài (link/trực tiếp). CTR thấp hơn mức 4-5% thường thấy ở kênh mới → nghi thumb/tiêu đề chưa đủ hút với khán giả 60+. Đăng trưa thay vì sáng sớm → khi so sánh với video khác phải tính đến yếu tố giờ đăng |
+| 2026-09-30 | 아내의 관 앞에서 목사도 답하지 못했습니다｜천국에서 먼저 간 가족을 알아볼까요 | Thiên đàng | A (Câu hỏi) | 2026-10-14 (CSV Studio 16/9-14/10) | 103 | 6,8% | 22 | 2,44 | 6:40 ≈ 22% | 0 | CTR cao nhất nhưng ít hiển thị; có views rải đều nhiều ngày (đến 13/10 vẫn 6/ngày) |
+| 2026-10-03 | 아내가 40년 동안 목사인 저에게도 숨긴 일｜드러내면 사라지는 은혜 5가지 | Bí mật | C (Con số) | 2026-10-14 | 847 | 2,13% | 34 | 4,11 | 7:16 ≈ 23% | 0 | Nhiều hiển thị nhất (57% tổng kênh) nhưng CTR thấp |
+| 2026-10-05 | 자기 십자가는 고난이 아닙니다｜병상의 아내가 제게 남긴 한 마디 | Hiểu lại | B (Nghịch lý) | 2026-10-14 | 29 | 0% | 3 | 0,05 | 0:57 ≈ 3% | 0 | YouTube gần như không phân phối; khẳng định trừu tượng, không bám nỗi lo |
+| 2026-10-07 | 혼자 남은 노년, 하나님은 어디 계십니까｜아내를 보내고 읽지 못한 구절 | Tuổi già | A | 2026-10-14 | 21 | – | 0 | – | – | 0 | Không có lượt xem |
+| 2026-10-10 | [신성종 목사] 먼저 떠난 이들은 지금 무엇을 할까~성경이 말하는 3가지 진실 | Thiên đàng | A | 2026-10-14 | 17 | 0% | 2 | 0,0015 | ~3 giây | 0 | 2 views ~3 giây — có thể là bấm thử của chính chủ kênh, kiểm tra lại |
+| 2026-10-13 | [신성종 목사] 죽은 자를 위해 기도해도 될까요~성경이 말하는 3가지 대답 | Hiểu lại / cho phép | A | 2026-10-14 (~1 ngày) | 468 | 4,06% | 22 | 3,93 | 10:42 ≈ 36% | 1 | TỐT NHẤT: 22 views ngay ngày đăng (1/3 tổng kênh), giữ chân cao nhất. Cần xem nguồn lưu lượng + việc đã làm ngày 13/10 |
 
 ## Giả thuyết đang thử nghiệm
 
@@ -120,3 +126,28 @@ Cột có dấu `≈` là tự tính: AVD ≈ thời gian xem ÷ views; views t�
   ("아내가 숨긴 일" + số 5 to, mẩu giấy to ở tiền cảnh). Giả thuyết: câu cụ thể có con người + mặt có cảm xúc
   > khái niệm trừu tượng. Chi tiết: `output/2026-10-01_vo-muc-su-giau-kin/06_series_state.json` →
   `thumbnail.ab_test`. → Điền bên thắng khi Studio báo kết quả.
+
+## Phân tích 5-6 video đầu (CSV Studio 2026-09-16 → 2026-10-14, ghi 2026-10-15)
+
+Tổng kênh: 83 views, 10,5 giờ xem, 1 sub, 1.485 hiển thị, CTR 2,96%, AVD gộp 9:42.
+
+- **Vấn đề là phân phối, không phải kịch bản.** 3 video đầu chiếm 95% hiển thị (847/468/103); 3 video 5-7-10/10
+  chỉ 17-29 hiển thị sau 3-5 ngày → YouTube thử nghiệm xong rồi dừng. AVD 22-36% với video 30 phút là ổn.
+- **Video thắng (13/10)**: tiêu đề `[신성종 목사] <câu hỏi lo lắng cụ thể>~성경이 말하는 3가지 대답`, chủ đề
+  "được phép / giải đáp thắc mắc" (khớp nhóm ổn định ở phần số liệu đối thủ). CTR 4,06%, AVD 36%, +1 sub.
+  22 views trong ngày đăng. Nguồn (Studio 2026-10-15, 23 views): **Video đề xuất 20 views / 457 hiển thị / CTR 3,7% / AVD 9:17**;
+  YouTube Tìm kiếm 2 views / 13 hiển thị / CTR 7,7% / AVD 21:38; Duyệt xem 1 view / AVD 28:00; Trực tiếp 0 → KHÔNG phải link
+  tự chia sẻ, YouTube tự đẩy qua cột "đề xuất" (có thể cạnh video 신성종 của đối thủ). Cần xem "Video đề xuất → Xem thêm" để biết đứng cạnh video nào.
+- **Video chết** có chung điểm: tiêu đề là khẳng định/khái niệm ("자기 십자가는 고난이 아닙니다") hoặc dài ôm nhiều ý
+  ("혼자 남은 노년, 하나님은 어디 계십니까") → không bám một nỗi lo cụ thể. Mẫu 17-29 hiển thị còn nhỏ, đây là giả thuyết.
+- **Chưa kết luận về CTR/thumb** khi < 1.000 hiển thị/video (chênh 3% vs 5% chỉ ~6 lượt nhấp).
+- **Tên kênh YouTube hiện là "열리는 문 | 간증"** (khác định vị). Quyết định 2026-10-15: GIỮ NGUYÊN, không đổi.
+  Giả thuyết "tên kênh gây lệch kỳ vọng" bị gác lại, không dùng để giải thích số liệu.
+
+### Việc sẽ làm (theo dõi kết quả điền vào bảng trên)
+1. Đổi thumb + tiêu đề 3 video chết sang công thức "câu hỏi lo lắng ~ N câu trả lời", mỗi lần 1 video, ghi ngày đổi.
+2. Tập sắp đăng (giấc mơ, linh hồn 3 ngày, tuổi già ít bạn) dùng công thức của video 13/10; đăng cùng giờ,
+   chia sẻ cho người thật sự quan tâm trong 2 giờ đầu (không mua view).
+3. Soft CTA mời đăng ký ở 35-45% video, ngay sau cảnh cảm xúc.
+4. Chưa đánh giá tiêu đề/thumb cho đến khi mỗi video ≥ 1.000 hiển thị; đo lại sau 10-14 ngày với ≥ 3 video mới.
+5. Kiểm tra: video 10/10 (2 views ~3 giây) có lỗi đầu video không; cảnh báo nào trong Studio cho 3 video chết.

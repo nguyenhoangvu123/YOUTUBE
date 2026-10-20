@@ -1,0 +1,58 @@
+{
+  "channel_id": "eundo-malsseum",
+  "episode_date": "2026-10-15",
+  "episode_title": "[신성종 목사] 기도하기 싫은 날, 믿음이 식었나요~성경의 대답",
+  "series_label": "열다섯 번째 말씀",
+  "previous_promise_fulfilled": "Đúng lời hứa cuối tập 14: '기도하고 싶지 않은 날에는 어떻게 해야 하는지… 마음은 원하는데 기도가 나오지 않는 밤을 예수님도 겟세마네에서… 마태복음 이십육 장 삼십팔 절에서 사십일 절'. Kịch bản đọc 마 26:38, 40, 41.",
+  "characters_used": [
+    "신성종 목사 - người dẫn (không dùng dữ kiện đời thực)",
+    "한 집사님 - hư cấu, 40 ngày không cầu nguyện, quay đầu ở bậc thềm nhà thờ (hook + khung mở/đóng); kết: ngồi hàng đầu, nói 'Chúa, con đến rồi'",
+    "한 간호사 - hư cấu, trực đêm, mắt tự nhắm khi cầu nguyện",
+    "한 사업가 - hư cấu, sau khi phá sản, giận Chúa, cầu nguyện lần đầu bằng lời trách"
+  ],
+  "promise_for_next_episode": "다음 시간에는 죽는 것이 두려운 것은 믿음이 없어서인지에 대해 말씀드리겠습니다. 죽음 앞에서 두려워도 괜찮은 이유를, 히브리서 이 장 십사 절에서 십오 절의 말씀으로 함께 살펴보겠습니다.",
+  "vignettes_used": [
+    "집사님: 40 ngày không cầu nguyện, quay đầu ở bậc thềm nhà thờ (hook)",
+    "마 26:36-41 Ghết-sê-ma-nê, 눅 22:45 ngủ vì buồn rầu (trả vòng mở ở đoạn 13-20)",
+    "한 간호사: trực đêm, mắt tự nhắm (điểm 1)",
+    "히 4:15, 마 12:20 꺼져 가는 심지 (điểm 2)",
+    "왕상 19 엘리야 먹고 쉼, 막 6:31, 눅 5:16, 롬 8:26, 시 88, 욥 2:13; 한 사업가 (điểm 3)",
+    "4 việc cầu nguyện nhỏ + 새벽기도 못 가는 노년 + 세 줄 기도 + 걸으며 기도 창 24:63 (điểm 4)",
+    "눅 15 아버지가 먼저 달려감, 사 30:18, 전 3:1; lời dành cho người bên cạnh (điểm 5); kết: 집사님 và 'Chúa, con đến rồi'"
+  ],
+  "motif_variant": "서재의 등불 — chỉ nhắc 1 lần ở cuối (đoạn 81), kết hợp câu đóng đinh 심지. Không dùng 문 (cửa).",
+  "concept_name": "기도 가뭄",
+  "core_sentence": "꺼져 가는 심지를 하나님은 끄지 않으십니다.",
+  "hook_style": "Con số (40 ngày) + hành động (đến bậc thềm rồi quay về) + câu tự nói + manh mối Ghết-sê-ma-nê + hạn '오 분 안에'. Tập 16 nên đổi kiểu mở (vd. câu nói nguyên văn hoặc hình ảnh).",
+  "number_rotation": "Tập 13 = 3, tập 14 = 4, tập 15 = không số. Tập 16 có thể dùng 5/6/7 (tránh 3, 4).",
+  "metrics": {
+    "hangul_syllables": 7712,
+    "paragraphs": 84,
+    "hook_eojeol": 56,
+    "soft_cta_pct": 37.4,
+    "core_sentence_count": 4,
+    "est_minutes": "≈ 30-31"
+  },
+  "scripture_to_verify": ["마 26:38, 40, 41", "눅 22:45", "히 4:15", "마 12:20 (diễn giải)", "눅 15:20", "갈 6:2", "욥 2:13", "사 30:18", "전 3:1", "막 6:31", "눅 5:16", "창 24:63"],
+  "thumbnail": {
+    "subject": "Ảnh thật cắt nền (eb3011c3a8c0c_nobg.png); nền Higgsfield mới không người: bình minh sương trên đồi, đèn dầu nhỏ cháy trên cột đá bên phải (gợi motif 등불/심지)",
+    "subject_ref_job_id": "e0c53cf9-6855-42c6-b194-845beb2e041c",
+    "character_id": "seo-eundo_v1",
+    "variant": "A",
+    "first_line_keyword": "기도하기",
+    "bg_variation": {
+      "time": "bình minh vàng, sương đồi",
+      "season": "cuối thu (khớp ngày đăng đầu tháng 11)",
+      "object": "đèn dầu nhỏ trên cột đá, không động vật",
+      "expression": "giữ nguyên ảnh gốc (cười)",
+      "shot_size": "cận mặt + vai"
+    },
+    "lines": ["기도하기 싫은 날", "믿음이 식었나요?", "성경의 대답", "(caption) 신성종 목사"],
+    "ab_variant_B_lines": ["새벽기도를 쉬고", "싶은 마음", "성경의 대답"],
+    "status": "đã dựng thumb_bg.png + thumb_final.png (2026-10-15)"
+  },
+  "upload": {
+    "planned_at": "2026-11-05 05:30 KST (= 03:30 giờ VN)",
+    "slot_rule": "THU 05:30 — slot kế tiếp sau TUE 2026-11-03 (planned_at của tập 14)."
+  }
+}

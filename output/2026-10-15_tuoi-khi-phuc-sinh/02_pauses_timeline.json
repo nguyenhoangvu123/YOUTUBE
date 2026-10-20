@@ -1,0 +1,572 @@
+[
+ {
+  "para": 1,
+  "new_start": 0.0,
+  "seg_len": 34.496,
+  "splits": []
+ },
+ {
+  "para": 2,
+  "new_start": 35.396,
+  "seg_len": 9.554,
+  "splits": []
+ },
+ {
+  "para": 3,
+  "new_start": 45.75,
+  "seg_len": 13.014,
+  "splits": []
+ },
+ {
+  "para": 4,
+  "new_start": 59.564,
+  "seg_len": 22.263,
+  "splits": []
+ },
+ {
+  "para": 5,
+  "new_start": 82.177,
+  "seg_len": 27.185,
+  "splits": []
+ },
+ {
+  "para": 6,
+  "new_start": 109.712,
+  "seg_len": 19.377,
+  "splits": []
+ },
+ {
+  "para": 7,
+  "new_start": 130.389,
+  "seg_len": 30.062,
+  "splits": []
+ },
+ {
+  "para": 8,
+  "new_start": 160.801,
+  "seg_len": 26.934,
+  "splits": []
+ },
+ {
+  "para": 9,
+  "new_start": 188.085,
+  "seg_len": 16.521,
+  "splits": []
+ },
+ {
+  "para": 10,
+  "new_start": 205.606,
+  "seg_len": 3.622,
+  "splits": []
+ },
+ {
+  "para": 11,
+  "new_start": 210.028,
+  "seg_len": 7.61,
+  "splits": []
+ },
+ {
+  "para": 12,
+  "new_start": 218.938,
+  "seg_len": 16.859,
+  "splits": []
+ },
+ {
+  "para": 13,
+  "new_start": 236.148,
+  "seg_len": 15.998,
+  "splits": []
+ },
+ {
+  "para": 14,
+  "new_start": 253.945,
+  "seg_len": 28.143,
+  "splits": []
+ },
+ {
+  "para": 15,
+  "new_start": 283.589,
+  "seg_len": 15.241,
+  "splits": []
+ },
+ {
+  "para": 16,
+  "new_start": 299.63,
+  "seg_len": 10.173,
+  "splits": []
+ },
+ {
+  "para": 17,
+  "new_start": 311.103,
+  "seg_len": 6.416,
+  "splits": []
+ },
+ {
+  "para": 18,
+  "new_start": 318.319,
+  "seg_len": 13.207,
+  "splits": []
+ },
+ {
+  "para": 19,
+  "new_start": 332.826,
+  "seg_len": 29.62,
+  "splits": []
+ },
+ {
+  "para": 20,
+  "new_start": 363.646,
+  "seg_len": 31.186,
+  "splits": []
+ },
+ {
+  "para": 21,
+  "new_start": 396.332,
+  "seg_len": 15.529,
+  "splits": []
+ },
+ {
+  "para": 22,
+  "new_start": 413.361,
+  "seg_len": 3.869,
+  "splits": []
+ },
+ {
+  "para": 23,
+  "new_start": 419.23,
+  "seg_len": 12.63,
+  "splits": []
+ },
+ {
+  "para": 24,
+  "new_start": 432.66,
+  "seg_len": 25.107,
+  "splits": []
+ },
+ {
+  "para": 25,
+  "new_start": 459.267,
+  "seg_len": 23.939,
+  "splits": []
+ },
+ {
+  "para": 26,
+  "new_start": 483.555,
+  "seg_len": 27.467,
+  "splits": []
+ },
+ {
+  "para": 27,
+  "new_start": 511.372,
+  "seg_len": 29.854,
+  "splits": []
+ },
+ {
+  "para": 28,
+  "new_start": 541.576,
+  "seg_len": 3.332,
+  "splits": []
+ },
+ {
+  "para": 29,
+  "new_start": 545.708,
+  "seg_len": 7.704,
+  "splits": []
+ },
+ {
+  "para": 30,
+  "new_start": 554.712,
+  "seg_len": 22.763,
+  "splits": []
+ },
+ {
+  "para": 31,
+  "new_start": 577.824,
+  "seg_len": 9.167,
+  "splits": []
+ },
+ {
+  "para": 32,
+  "new_start": 587.792,
+  "seg_len": 4.807,
+  "splits": []
+ },
+ {
+  "para": 33,
+  "new_start": 593.899,
+  "seg_len": 24.623,
+  "splits": []
+ },
+ {
+  "para": 34,
+  "new_start": 618.871,
+  "seg_len": 4.287,
+  "splits": []
+ },
+ {
+  "para": 35,
+  "new_start": 623.959,
+  "seg_len": 14.288,
+  "splits": []
+ },
+ {
+  "para": 36,
+  "new_start": 639.547,
+  "seg_len": 18.702,
+  "splits": []
+ },
+ {
+  "para": 37,
+  "new_start": 658.599,
+  "seg_len": 18.405,
+  "splits": []
+ },
+ {
+  "para": 38,
+  "new_start": 678.204,
+  "seg_len": 36.856,
+  "splits": []
+ },
+ {
+  "para": 39,
+  "new_start": 715.41,
+  "seg_len": 18.945,
+  "splits": []
+ },
+ {
+  "para": 40,
+  "new_start": 735.555,
+  "seg_len": 5.048,
+  "splits": []
+ },
+ {
+  "para": 41,
+  "new_start": 742.603,
+  "seg_len": 2.247,
+  "splits": []
+ },
+ {
+  "para": 42,
+  "new_start": 747.349,
+  "seg_len": 9.753,
+  "splits": []
+ },
+ {
+  "para": 43,
+  "new_start": 758.602,
+  "seg_len": 24.405,
+  "splits": []
+ },
+ {
+  "para": 44,
+  "new_start": 784.507,
+  "seg_len": 5.996,
+  "splits": []
+ },
+ {
+  "para": 45,
+  "new_start": 792.503,
+  "seg_len": 23.337,
+  "splits": []
+ },
+ {
+  "para": 46,
+  "new_start": 816.19,
+  "seg_len": 37.147,
+  "splits": []
+ },
+ {
+  "para": 47,
+  "new_start": 853.687,
+  "seg_len": 23.426,
+  "splits": []
+ },
+ {
+  "para": 48,
+  "new_start": 878.313,
+  "seg_len": 27.927,
+  "splits": []
+ },
+ {
+  "para": 49,
+  "new_start": 906.591,
+  "seg_len": 5.371,
+  "splits": []
+ },
+ {
+  "para": 50,
+  "new_start": 913.262,
+  "seg_len": 20.665,
+  "splits": []
+ },
+ {
+  "para": 51,
+  "new_start": 934.278,
+  "seg_len": 27.946,
+  "splits": []
+ },
+ {
+  "para": 52,
+  "new_start": 962.574,
+  "seg_len": 22.462,
+  "splits": []
+ },
+ {
+  "para": 53,
+  "new_start": 986.036,
+  "seg_len": 30.338,
+  "splits": []
+ },
+ {
+  "para": 54,
+  "new_start": 1016.724,
+  "seg_len": 19.382,
+  "splits": []
+ },
+ {
+  "para": 55,
+  "new_start": 1037.606,
+  "seg_len": 6.331,
+  "splits": []
+ },
+ {
+  "para": 56,
+  "new_start": 1045.937,
+  "seg_len": 19.98,
+  "splits": []
+ },
+ {
+  "para": 57,
+  "new_start": 1066.916,
+  "seg_len": 31.665,
+  "splits": []
+ },
+ {
+  "para": 58,
+  "new_start": 1098.931,
+  "seg_len": 17.137,
+  "splits": []
+ },
+ {
+  "para": 59,
+  "new_start": 1116.419,
+  "seg_len": 25.177,
+  "splits": []
+ },
+ {
+  "para": 60,
+  "new_start": 1141.946,
+  "seg_len": 20.145,
+  "splits": []
+ },
+ {
+  "para": 61,
+  "new_start": 1162.441,
+  "seg_len": 22.226,
+  "splits": []
+ },
+ {
+  "para": 62,
+  "new_start": 1185.016,
+  "seg_len": 24.066,
+  "splits": []
+ },
+ {
+  "para": 63,
+  "new_start": 1210.082,
+  "seg_len": 39.668,
+  "splits": []
+ },
+ {
+  "para": 64,
+  "new_start": 1250.1,
+  "seg_len": 29.339,
+  "splits": []
+ },
+ {
+  "para": 65,
+  "new_start": 1279.789,
+  "seg_len": 26.104,
+  "splits": []
+ },
+ {
+  "para": 66,
+  "new_start": 1306.243,
+  "seg_len": 33.826,
+  "splits": []
+ },
+ {
+  "para": 67,
+  "new_start": 1341.569,
+  "seg_len": 4.382,
+  "splits": []
+ },
+ {
+  "para": 68,
+  "new_start": 1346.751,
+  "seg_len": 16.094,
+  "splits": []
+ },
+ {
+  "para": 69,
+  "new_start": 1364.346,
+  "seg_len": 30.225,
+  "splits": []
+ },
+ {
+  "para": 70,
+  "new_start": 1394.921,
+  "seg_len": 26.624,
+  "splits": []
+ },
+ {
+  "para": 71,
+  "new_start": 1423.045,
+  "seg_len": 4.667,
+  "splits": []
+ },
+ {
+  "para": 72,
+  "new_start": 1429.712,
+  "seg_len": 8.931,
+  "splits": []
+ },
+ {
+  "para": 73,
+  "new_start": 1440.143,
+  "seg_len": 21.18,
+  "splits": []
+ },
+ {
+  "para": 74,
+  "new_start": 1461.673,
+  "seg_len": 21.545,
+  "splits": []
+ },
+ {
+  "para": 75,
+  "new_start": 1483.568,
+  "seg_len": 18.185,
+  "splits": []
+ },
+ {
+  "para": 76,
+  "new_start": 1502.103,
+  "seg_len": 28.306,
+  "splits": []
+ },
+ {
+  "para": 77,
+  "new_start": 1531.409,
+  "seg_len": 30.826,
+  "splits": []
+ },
+ {
+  "para": 78,
+  "new_start": 1562.585,
+  "seg_len": 19.78,
+  "splits": []
+ },
+ {
+  "para": 79,
+  "new_start": 1582.715,
+  "seg_len": 15.15,
+  "splits": []
+ },
+ {
+  "para": 80,
+  "new_start": 1599.365,
+  "seg_len": 16.52,
+  "splits": []
+ },
+ {
+  "para": 81,
+  "new_start": 1617.385,
+  "seg_len": 4.484,
+  "splits": []
+ },
+ {
+  "para": 82,
+  "new_start": 1623.869,
+  "seg_len": 21.651,
+  "splits": []
+ },
+ {
+  "para": 83,
+  "new_start": 1647.02,
+  "seg_len": 30.108,
+  "splits": []
+ },
+ {
+  "para": 84,
+  "new_start": 1677.478,
+  "seg_len": 24.681,
+  "splits": []
+ },
+ {
+  "para": 85,
+  "new_start": 1702.51,
+  "seg_len": 26.297,
+  "splits": []
+ },
+ {
+  "para": 86,
+  "new_start": 1729.157,
+  "seg_len": 30.295,
+  "splits": []
+ },
+ {
+  "para": 87,
+  "new_start": 1760.952,
+  "seg_len": 5.001,
+  "splits": []
+ },
+ {
+  "para": 88,
+  "new_start": 1768.953,
+  "seg_len": 4.723,
+  "splits": []
+ },
+ {
+  "para": 89,
+  "new_start": 1776.676,
+  "seg_len": 6.81,
+  "splits": []
+ },
+ {
+  "para": 90,
+  "new_start": 1786.485,
+  "seg_len": 7.326,
+  "splits": []
+ },
+ {
+  "para": 91,
+  "new_start": 1796.812,
+  "seg_len": 4.241,
+  "splits": []
+ },
+ {
+  "para": 92,
+  "new_start": 1803.053,
+  "seg_len": 12.584,
+  "splits": []
+ },
+ {
+  "para": 93,
+  "new_start": 1817.136,
+  "seg_len": 47.901,
+  "splits": []
+ },
+ {
+  "para": 94,
+  "new_start": 1866.038,
+  "seg_len": 20.228,
+  "splits": []
+ },
+ {
+  "para": 95,
+  "new_start": 1887.265,
+  "seg_len": 6.134,
+  "splits": []
+ }
+]
